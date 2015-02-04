@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<configuration>
+	<NODE_PATH>graph2.xml</NODE_PATH>
+	<!--Number of active ant, represents the number of active threads, the higher 
+		the thread count the faster it will converge to an optimal solution. -->
+	
+	<NUMBER_ANTS>10000</NUMBER_ANTS>
+	<!--Number of active ant, represents the number of active threads, the higher 
+		the thread count the faster it will converge to an optimal solution. -->
+
+	<NUMBER_ATTEMPT>500000</NUMBER_ATTEMPT>
+	<!-- represents the number of cases actually controlled, the greater the 
+		number of cases, and the higher the accuracy of the result. must always be 
+		greater than the number of active threads. -->
+
+	<BEGIN_NODE>A</BEGIN_NODE>
+	<END_NODE>F</END_NODE>
+	<!-- represents the start node (BEGIN_NODE) and end node (END_NODE) -->
+
+	<ERROR_NOT_STOP>7</ERROR_NOT_STOP>
+	<!-- when the execution is stopped it may happen that a certain number of 
+		threads still active, this value represents the tolerance of these threads -->
+
+	<!-- TIMER CONFIG REAL TIME -->
+	<THREAD_TIME>1000</THREAD_TIME>
+	<!-- represents the speed of execution of threads, running too fast can 
+		lead to results spoiled, because this thread to fall asleep quickly and wake 
+		up always the same thread. -->
+
+	<DRYING_RATE>500</DRYING_RATE>
+	<!-- represents the speed of drying the track, a high frequency can lengthen 
+		the time of convergence towards an optimal solution, also exponentially -->
+	<DRYING_FORCE>10</DRYING_FORCE>
+	<!-- represents the force of drying the track, a high frequency can lengthen 
+		the time of convergence towards an optimal solution, also exponentially -->
+
+	<LIFE_POINT>0</LIFE_POINT>
+	<!-- represents the maximum number of steps that a single thread can do 
+		before you die, to standard is set to 0 and is automatically assigned a number 
+		equal to the number of nodes-1, change this value may degrade the performance 
+		of the algorithm, and in If this is too low can cause the death of all the 
+		threads without ever finding an optimal solution. -->
+	<BRAIN_TYPE>5</BRAIN_TYPE>
+	<!-- 0 = RandomBrain -->
+	<!-- 1 = LinearBrain -->
+	<!-- 2 = ExpoBrain -->
+	<!-- 3 = SqrtBrain -->
+	<!-- 4 = FunBrain -->
+	<!-- 5 = LogBrain -->
+</configuration> 

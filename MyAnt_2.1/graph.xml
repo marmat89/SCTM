@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<NODES>
+	<NODE>
+		<NAME>A</NAME>
+		<LINK DEST="B" DIST="1"></LINK>
+	</NODE>
+	<NODE>
+		<NAME>B</NAME>
+		<LINK DEST="C" DIST="1"></LINK>
+		<LINK DEST="D" DIST="3"></LINK>
+	</NODE>
+	<NODE>
+		<NAME>C</NAME>
+		<LINK DEST="E" DIST="4"></LINK>
+	</NODE>
+	<NODE>
+		<NAME>D</NAME>
+		<LINK DEST="E" DIST="1"></LINK>
+	</NODE>
+	<NODE>
+		<NAME>E</NAME>
+		<LINK DEST="F" DIST="1"></LINK>
+	</NODE>
+	
+	<NODE>
+		<NAME>F</NAME>
+	</NODE>
+</NODES>
