@@ -3,19 +3,21 @@ package it.unibo.station.impl;
 import java.util.ArrayList;
 import java.util.List;
 
-import it.unibo.interfaces.Station;
+import it.unibo.debugger.OnBoardDebugger;
+import it.unibo.interfaces.StationRPI;
 import it.unibo.interfaces.Sensor;
 import it.unibo.sensors.impl.*;
 import it.unibo.sensors.simulated.impl.*;
 import it.unibo.util.*;
 
-public class AirMonitor extends Station {
+public class AirMonitor extends StationRPI {
 
 	public AirMonitor(String name, Coordinate position, int ID) {
 		super(name, position, ID);
 		System.out.println("BUILD:AirMonitor=>" + this.getName() + " | "
 				+ this.getPosition().getLat() + " , "
 				+ this.getPosition().getLat());
+		mesList=new ArrayList();
 	}
 
 	private Sensor temperature;
@@ -124,12 +126,15 @@ public class AirMonitor extends Station {
 	public static void main(String[] args) {
 		AirMonitor testAir = new AirMonitor("testAirMonitor", new Coordinate(0,
 				0), 3);
+		OnBoardDebugger deb= new OnBoardDebugger(testAir);
+				
+		
 		System.out.println("Create new STATION name:" + testAir.name);
-		testAir.addTemperatureSensor(new TempSensorArduino("DHT11", "TMP"));
-		testAir.addHumiditySensor(new HumidSensorArduino("DHT11", "HMD"));
-		testAir.addLightSensor(new LightSensorArduino("LDRGL5528", "LGH"));
-		testAir.addRainSensor(new RainSensorArduino("RAINECO", "RL"));
-		testAir.addSpeedSensor(new SpeedSensorArduino("HC020K", "SPD"));
+		testAir.addTemperatureSensor(new tempSIMSensor("DHT11", "TMP"));
+		testAir.addHumiditySensor(new HumidSensorArduino("DHT11", "HMD",deb));
+		testAir.addLightSensor(new LightSensorArduino("LDRGL5528", "LGH",deb));
+		testAir.addRainSensor(new RainSensorArduino("RAINECO", "RL",deb));
+		testAir.addSpeedSensor(new SpeedSensorArduino("HC020K", "SPD",deb));
 		testAir.monitorUpdates();
 	}
 }

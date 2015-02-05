@@ -3,14 +3,14 @@ package it.unibo.station.impl;
 import java.util.ArrayList;
 import java.util.List;
 
-import it.unibo.interfaces.Station;
+import it.unibo.interfaces.StationRPI;
 import it.unibo.interfaces.Sensor;
 import it.unibo.sensors.simulated.impl.tempSIMSensor;
 import it.unibo.sensors.simulated.impl.tiltSIMSensor;
 import it.unibo.sensors.simulated.impl.humidSIMSensor;
 import it.unibo.util.*;
 
-public class GroundMonitor extends Station {
+public class GroundMonitor extends StationRPI {
 
 	public GroundMonitor(String name, Coordinate position, int ID) {
 		super(name, position, ID);

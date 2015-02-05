@@ -3,6 +3,7 @@ package it.unibo.sensors.impl;
 import java.util.Observable;
 import java.util.Observer;
 
+import it.unibo.debugger.OnBoardDebugger;
 import it.unibo.interfaces.Sensor;
 import it.unibo.interfaces.SensorArduino;
 import it.unibo.sensors.simulated.impl.rainSIMSensor;
@@ -13,6 +14,11 @@ import it.unibo.util.IntMeasure;
 import it.unibo.util.SerialCom;
 
 public class RainSensorArduino extends SensorArduino implements Observer {
+
+public RainSensorArduino(String name, String type, OnBoardDebugger deb) {
+		super(name, type, deb);
+		// TODO Auto-generated constructor stub
+	}
 
 	public RainSensorArduino(String name, String type) {
 		super(name, type);

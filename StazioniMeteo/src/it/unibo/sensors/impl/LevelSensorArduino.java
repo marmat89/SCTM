@@ -3,6 +3,7 @@ package it.unibo.sensors.impl;
 import java.util.Observable;
 import java.util.Observer;
 
+import it.unibo.debugger.OnBoardDebugger;
 import it.unibo.interfaces.Sensor;
 import it.unibo.interfaces.SensorArduino;
 import it.unibo.sensors.simulated.impl.rainSIMSensor;
@@ -15,9 +16,12 @@ import it.unibo.util.SerialCom;
 
 public class LevelSensorArduino extends SensorArduino {
 
+public LevelSensorArduino(String name, String type, OnBoardDebugger deb) {
+		super(name, type, deb);
+	}
+
 	public LevelSensorArduino(String name, String type) {
 		super(name, type);
-
 	}
 
 	// All physical sensors must implement getSurvey ()

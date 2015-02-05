@@ -3,12 +3,12 @@ package it.unibo.station.impl;
 import java.util.ArrayList;
 import java.util.List;
 
-import it.unibo.interfaces.Station;
+import it.unibo.interfaces.StationRPI;
 import it.unibo.interfaces.Sensor;
 import it.unibo.sensors.simulated.impl.tempSIMSensor;
 import it.unibo.util.*;
 
-public class WaterMonitor extends Station {
+public class WaterMonitor extends StationRPI {
 
 	public WaterMonitor(String name, Coordinate position,int ID) {
 		super(name, position, ID);

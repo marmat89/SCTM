@@ -3,14 +3,14 @@ package it.unibo.system;
 import java.io.IOException;
 import java.sql.SQLException;
 
-import it.unibo.interfaces.Station;
+import it.unibo.interfaces.StationRPI;
 import it.unibo.util.*;
 
 public class StationSimulator implements Runnable {
-	Station s;
+	StationRPI s;
 	DbCom sm;
 
-	public void ThreadCreation(Station s) {
+	public void ThreadCreation(StationRPI s) {
 		this.s = s;
 
 		// THREAD finder Start

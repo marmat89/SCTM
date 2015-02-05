@@ -3,6 +3,7 @@ package it.unibo.sensors.impl;
 import java.util.Observable;
 import java.util.Observer;
 
+import it.unibo.debugger.OnBoardDebugger;
 import it.unibo.interfaces.SensorArduino;
 import it.unibo.util.AttendRispThread;
 import it.unibo.util.IMeasure;
@@ -10,6 +11,20 @@ import it.unibo.util.IntMeasure;
 import it.unibo.util.SerialCom;
 
 public class HumidSensorArduino  extends SensorArduino {
+
+public HumidSensorArduino(String name, String type) {
+		super(name, type);
+		// TODO Auto-generated constructor stub
+	}
+
+
+	public HumidSensorArduino(String name, String type, OnBoardDebugger deb) {
+		super(name, type, deb);
+		// TODO Auto-generated constructor stub
+	}
+
+
+
 
 	//used for debug mode, if Serial port don't respond in N seconds we have an allarm
 	private AttendRispThread attendRisp;
@@ -20,10 +35,7 @@ public class HumidSensorArduino  extends SensorArduino {
 	//	Its fairly simple to use, but requires careful timing to grab data. 
 	//	The only real downside of this sensor is you can only get new data from it once every 2 seconds,
 	//	so when using our library, sensor readings can be up to 2 seconds old.
-	public HumidSensorArduino(String name, String type) {
-		super(name, type);
 
-	}
 
 
 	// All physical sensors must implement getSurvey ()

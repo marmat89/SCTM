@@ -24,23 +24,26 @@ public abstract class SensorArduino extends Sensor implements Observer {
 	public String value;
 	// for communication with arduino
 	protected SerialCom arduino;
+    public OnBoardDebugger deb;
 	private AttendRispThread attendRisp;
-	private OnBoardDebugger deb;
-
 	public SensorArduino(String name, String type) {
 		super(type, reliability, type);
 		this.name = name;
 		this.reliability = true;
 		this.datatype = type;
-
+	}	
+	public SensorArduino(String name, String type,OnBoardDebugger deb ) {
+		super(type, reliability, type);
+		this.name = name;
+		this.reliability = true;
+		this.datatype = type;
+		this.deb=deb;
 	}
 
 	protected boolean initSerialCom(SensorArduino sens) {
 		arduino = new SerialCom();
 		// initialize com port
 		if (!arduino.initialize()) {
-			deb = new OnBoardDebugger(new AirMonitor("testAirMonitor",
-					new Coordinate(0, 0), 3));
 			deb.SerialOccupatedProblem(this);
 			return false;
 		} else {
@@ -85,7 +88,7 @@ public abstract class SensorArduino extends Sensor implements Observer {
 		// rude attend variable
 		System.out.println("====Arduino attend reply====");
 		attendRisp = new AttendRispThread();
-		attendRisp.ThreadCreation(this);
+		attendRisp.ThreadCreation(deb);
 		try {
 			this.wait();
 		} catch (InterruptedException e) {

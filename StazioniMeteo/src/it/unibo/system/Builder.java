@@ -1,5 +1,6 @@
 package it.unibo.system;
 
+import it.unibo.debugger.OnBoardDebugger;
 import it.unibo.sensors.impl.*;
 import it.unibo.sensors.simulated.impl.*;
 import it.unibo.station.impl.*;
@@ -26,14 +27,15 @@ public class Builder {
 		StationSimulator wS = new StationSimulator();
 		wS.ThreadCreation(testWTR);
 		*/
-		System.out.println("Create new STATION name:" + testAir.getName());
-		testAir.addTemperatureSensor(new TempSensorArduino("DHT11", "TMP"));
-		testAir.addHumiditySensor(new HumidSensorArduino("DHT11", "HMD"));
-		testAir.addLightSensor(new LightSensorArduino("LDRGL5528", "LGH"));
-		testAir.addRainSensor(new RainSensorArduino("RAINECO", "RL"));
-		testAir.addSpeedSensor(new SpeedSensorArduino("HC020K", "SPD"));
-		StationSimulator aS = new StationSimulator();
-		aS.ThreadCreation(testAir);
+//		System.out.println("Create new STATION name:" + testAir.getName());
+//		OnBoardDebugger deb= new OnBoardDebugger(testAir);
+//		testAir.addTemperatureSensor(new tempSIMSensor("DHT11", "TMP"));
+//		testAir.addHumiditySensor(new HumidSensorArduino("DHT11", "HMD",deb));
+//		testAir.addLightSensor(new LightSensorArduino("LDRGL5528", "LGH",deb));
+//		testAir.addRainSensor(new RainSensorArduino("RAINECO", "RL",deb));
+//		testAir.addSpeedSensor(new SpeedSensorArduino("HC020K", "SPD",deb));
+//		StationSimulator aS = new StationSimulator();
+//		aS.ThreadCreation(testAir);
 		
 		System.out.println("Create new STATION name:" + testGND.getName());
 		testGND.addTemperatureSensor(new tempSIMSensor("DS18B20", "TMP"));

@@ -20,6 +20,7 @@ public abstract class Sensor implements ISensor {
 	//utility var used on the DB
 	private float minValue;
 	private float maxValue;
+	
 	protected List<Measure> measures = new ArrayList();
 
 	//init Sensor with value on the DB
