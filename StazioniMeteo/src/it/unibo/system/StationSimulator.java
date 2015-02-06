@@ -2,10 +2,15 @@ package it.unibo.system;
 
 import java.io.IOException;
 import java.sql.SQLException;
-
 import it.unibo.interfaces.StationRPI;
 import it.unibo.util.*;
-
+/**
+ * 
+ * @author matteo.mariani11@studio.unibo.it
+ * @version 1.0.0
+ * @since  06/feb/2015 01:36:19
+ *
+ */
 public class StationSimulator implements Runnable {
 	StationRPI s;
 	DbCom sm;
@@ -24,12 +29,11 @@ public class StationSimulator implements Runnable {
 
 			sm = new DbCom("root", "root");
 			try {
-				s.monitorUpdates();
-				if (s.monitorUpdates() != null) {
-					sm.sendMes(s);
+			if (s.monitorUpdates() != null) {
+					sm.sendMes(s,s.mesList);
 				}
 
-				Thread.sleep(60000);
+				Thread.sleep(30000);
 				sm.turnOffConnection("root", "root");
 
 			} catch (InterruptedException e) {

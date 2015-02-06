@@ -1,6 +1,7 @@
 package it.unibo.station.impl;
 
 import java.util.ArrayList;
+import java.util.Iterator;
 import java.util.List;
 
 import it.unibo.debugger.OnBoardDebugger;
@@ -17,7 +18,7 @@ public class AirMonitor extends StationRPI {
 		System.out.println("BUILD:AirMonitor=>" + this.getName() + " | "
 				+ this.getPosition().getLat() + " , "
 				+ this.getPosition().getLat());
-		mesList=new ArrayList();
+		mesList = new ArrayList<AssembledList>();
 	}
 
 	private Sensor temperature;
@@ -30,10 +31,10 @@ public class AirMonitor extends StationRPI {
 	@Override
 	public List<Sensor> getSensorList() {
 		List<Sensor> sensors = new ArrayList<Sensor>();
-		sensors.add(temperature);
-		sensors.add(humidity);
-		sensors.add(speed);
-		sensors.add(light);
+			sensors.add(temperature);
+			sensors.add(humidity);
+			sensors.add(speed);
+			sensors.add(light);
 		sensors.add(rain);
 		return sensors;
 	}
@@ -67,58 +68,67 @@ public class AirMonitor extends StationRPI {
 
 	}
 
-	public List<Measure> monitorUpdates() {
-		lastMes = temperature.getSurvey();
-		if (temperature != null && lastMes != null) {
-			mesList.add((FloatMeasure) lastMes);
-			System.out.println("UPDATE | "
-					+ temperature.getName()
-					+ " => "
-					+ ((FloatMeasure) mesList.get(mesList.size() - 1))
-							.getValue() + ""
-					+ mesList.get(mesList.size() - 1).getUOM());
-		} else {
-			System.err.println("ALLERT | no temperature monitor find");
+	public List<AssembledList> monitorUpdates() {
+
+		mesList.clear();
+		List<Sensor> sensors = this.getSensorList();
+		Iterator itSen = sensors.iterator();
+		while (itSen.hasNext()) {
+			Sensor sen = (Sensor) itSen.next();
+			if (sen != null) {
+			lastMes = sen.getSurvey();
+			if (sen != null && lastMes != null) {
+				mesList.add(new AssembledList(sen, lastMes));
+				System.out.println("UPDATE | " + sen.getName() + " => "
+						+ lastMes.getValue() + "" + lastMes.getUOM());
+			} else {
+				System.err.println("ALLERT | no " + sen.getName()
+						+ "monitor find");
+			}
+			}
 		}
-		lastMes = humidity.getSurvey();
-		
-		if (humidity != null && lastMes != null) {
-			mesList.add((IntMeasure) lastMes);
-			System.out.println("UPDATE | " + humidity.getName() + " => "
-					+ ((IntMeasure) mesList.get(mesList.size() - 1)).getValue()
-					+ "" + mesList.get(mesList.size() - 1).getUOM());
-		} else {
-			System.err.println("ALLERT | no humidity monitor find");
-		}
-		lastMes = speed.getSurvey();
-		if (speed != null && lastMes != null) {
-			mesList.add((FloatMeasure)lastMes);
-			System.out.println("UPDATE | "
-					+ speed.getName()
-					+ " => "
-					+ ((FloatMeasure) mesList.get(mesList.size() - 1))
-							.getValue());
-		} else {
-			System.err.println("ALLERT | no speed monitor find");
-		}
-		lastMes = light.getSurvey();
-		if (light != null && lastMes != null) {
-			mesList.add((IntMeasure) lastMes);
-			System.out.println("UPDATE | " + light.getName() + " => "
-					+ ((IntMeasure) mesList.get(mesList.size() - 1)).getValue()
-					+ "" + mesList.get(mesList.size() - 1).getUOM());
-		} else {
-			System.err.println("ALLERT | no light monitor find");
-		}
-		lastMes = rain.getSurvey();
-		if (rain != null && lastMes != null) {
-			mesList.add((IntMeasure) lastMes);
-			System.out.println("UPDATE | " + rain.getName() + " => "
-					+ ((IntMeasure) mesList.get(mesList.size() - 1)).getValue()
-					+ "" + mesList.get(mesList.size() - 1).getUOM());
-		} else {
-			System.err.println("ALLERT | no rain monitor find");
-		}
+
+		// lastMes = temperature.getSurvey();
+		// if (temperature != null && lastMes != null) {
+		// mesList.add(new AssembledList(temperature, lastMes));
+		// System.out.println("UPDATE | " + temperature.getName() + " => "
+		// + lastMes.getValue() + "" + lastMes.getUOM());
+		// } else {
+		// System.err.println("ALLERT | no temperature monitor find");
+		// }
+		// lastMes = humidity.getSurvey();
+
+		// if (humidity != null && lastMes != null) {
+		// mesList.add(new AssembledList(humidity, lastMes));
+		// System.out.println("UPDATE | " + humidity.getName() + " => "
+		// + lastMes.getValue() + "" + lastMes.getUOM());
+		// } else {
+		// System.err.println("ALLERT | no humidity monitor find");
+		// }
+		// lastMes = speed.getSurvey();
+		// if (speed != null && lastMes != null) {
+		// mesList.add(new AssembledList(speed, lastMes));
+		// System.out.println("UPDATE | " + speed.getName() + " => "
+		// + lastMes.getValue() + "" + lastMes.getUOM());
+		// } else {
+		// System.err.println("ALLERT | no speed monitor find");
+		// }
+		// lastMes = light.getSurvey();
+		// if (light != null && lastMes != null) {
+		// mesList.add(new AssembledList(light, lastMes));
+		// System.out.println("UPDATE | " + light.getName() + " => "
+		// + lastMes.getValue() + "" + lastMes.getUOM());
+		// } else {
+		// System.err.println("ALLERT | no light monitor find");
+		// }
+		// lastMes = rain.getSurvey();
+		// if (rain != null && lastMes != null) {
+		// mesList.add(new AssembledList(rain, lastMes));
+		// System.out.println("UPDATE | " + rain.getName() + " => "
+		// + lastMes.getValue() + "" + lastMes.getUOM());
+		// } else {
+		// System.err.println("ALLERT | no rain monitor find");
+		// }
 
 		return mesList;
 	}
@@ -126,15 +136,14 @@ public class AirMonitor extends StationRPI {
 	public static void main(String[] args) {
 		AirMonitor testAir = new AirMonitor("testAirMonitor", new Coordinate(0,
 				0), 3);
-		OnBoardDebugger deb= new OnBoardDebugger(testAir);
-				
-		
+		OnBoardDebugger deb = new OnBoardDebugger(testAir);
+
 		System.out.println("Create new STATION name:" + testAir.name);
-		testAir.addTemperatureSensor(new tempSIMSensor("DHT11", "TMP"));
-		testAir.addHumiditySensor(new HumidSensorArduino("DHT11", "HMD",deb));
-		testAir.addLightSensor(new LightSensorArduino("LDRGL5528", "LGH",deb));
-		testAir.addRainSensor(new RainSensorArduino("RAINECO", "RL",deb));
-		testAir.addSpeedSensor(new SpeedSensorArduino("HC020K", "SPD",deb));
-		testAir.monitorUpdates();
+		testAir.addTemperatureSensor(new TempSensorSim("DHT11", "TMP"));
+		testAir.addHumiditySensor(new HumidSensorArduino("DHT11", "HMD", deb));
+		testAir.addLightSensor(new LightSensorArduino("LDRGL5528", "LGH", deb));
+		testAir.addRainSensor(new RainSensorArduino("RAINECO", "RL"));
+		// testAir.addSpeedSensor(new SpeedSensorArduino("HC020K", "SPD",deb));
+		System.out.println(testAir.monitorUpdates());
 	}
 }

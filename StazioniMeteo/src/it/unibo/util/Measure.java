@@ -2,12 +2,25 @@ package it.unibo.util;
 
 import java.util.Date;
 
-
+/**
+ * 
+ * @author matteo.mariani11@studio.unibo.it
+ * @version 1.0.0
+ * @since  05/feb/2015 22:18:08
+ *
+ */
 public abstract class Measure implements IMeasure{
-
+	
+/**
+ * 
+ */
 private boolean simulated;
 private Date time;
 private String UOM;
+/**
+ * 
+ * @param simulated
+ */
 public Measure(boolean simulated) {
 	this.simulated=simulated;
 }

@@ -2,14 +2,37 @@ package it.unibo.util;
 
 import java.util.Date;
 
+/**
+ * 
+ * @author matteo.mariani11@studio.unibo.it
+ * @version 1.0.0
+ * @since 05/feb/2015 22:17:40
+ *
+ */
 public interface IMeasure {
 
-	public  String getUOM();
+	/**
+	 * 
+	 * @return
+	 */
+	public String getUOM();
 
-	public  boolean isSimulated();
+	/**
+	 * 
+	 * @return
+	 */
+	public boolean isSimulated();
 
-	public  Date getTime();
-	
+	/**
+	 * 
+	 * @return
+	 */
+	public Date getTime();
+
+	/**
+	 * 
+	 * @return
+	 */
 	public Object getValue();
 
 }

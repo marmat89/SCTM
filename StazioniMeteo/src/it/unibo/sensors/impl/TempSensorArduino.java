@@ -1,55 +1,67 @@
 package it.unibo.sensors.impl;
 
-import java.util.Observable;
-import java.util.Observer;
-
 import it.unibo.debugger.OnBoardDebugger;
-import it.unibo.interfaces.Sensor;
 import it.unibo.interfaces.SensorArduino;
-import it.unibo.sensors.simulated.impl.humidSIMSensor;
-import it.unibo.sensors.simulated.impl.tempSIMSensor;
-import it.unibo.util.FloatMeasure;
 import it.unibo.util.IMeasure;
-import it.unibo.util.SerialCom;
 
-public class TempSensorArduino extends SensorArduino implements Observer {
-
-public TempSensorArduino(String name, String type, OnBoardDebugger deb) {
+/**
+ * DS18B20 is best choice for thermal sensor This is an electronic thermometer
+ * which has high accuracy over a wide range (accurate to ±0.5°C over the range
+ * of -10°C to +85°C) (Workable from -55°C to +125°C). You can locate these
+ * thermometer chips up to 100M away from your Arduino. Shorter cables can be
+ * just 2 wires. NOTE: There must be a pullup resistor of about 5K in all cases,
+ * but the Brick versions have this included.
+ * 
+ * @author matteo.mariani11@studio.unibo.it
+ * @version 1.0.0
+ * @since 06/feb/2015 00:55:13
+ *
+ */
+public class TempSensorArduino extends SensorArduino {
+	/**
+	 * We must enter reference data on DB,we can have sensors with or without
+	 * on-board debugger
+	 * 
+	 * @param name
+	 * @param type
+	 * @param deb
+	 */
+	public TempSensorArduino(String name, String type, OnBoardDebugger deb) {
 		super(name, type, deb);
-		// TODO Auto-generated constructor stub
 	}
 
+	/**
+	 * We must enter reference data on DB,we can have sensors with or without
+	 * on-board debugger
+	 * 
+	 * @param name
+	 * @param type
+	 */
 	public TempSensorArduino(String name, String type) {
 		super(name, type);
 
 	}
 
-	// All physical sensors must implement getSurvey ()
-	// Depending on the type of data that is required
-	// have all the same iter: OPEN port => SEND request => GET answer
+	/**
+	 * All physical sensors must implement getSurvey () Depending on the type of
+	 * data that is required have all the same iter: OPEN port => SEND request
+	 * => GET answer
+	 * 
+	 */
 	@Override
 	public synchronized IMeasure getSurvey() {
-
 		// arduino serial com setup
 		if (initSerialCom(this)) {
-
 			// keyword arduino request
 			arduino.sendData("getTemp=");
 			// used for attend sensor respond for N seconds
 			attendSerialCom();
-			return getIntValue();
+			return getFloatValue();
 		} else
 			return null;
-
 	}
 
-	@Override
-	public synchronized void update(Observable o, Object arg) {
-		value = ((SerialCom) o).getSomeVariable();
-		System.out.println("Arduino received = " + value);
-		this.notify();
-
-	}
+	
 
 	public static void main(String[] args) {
 		TempSensorArduino testSens = new TempSensorArduino("DHT11", "HMD");
