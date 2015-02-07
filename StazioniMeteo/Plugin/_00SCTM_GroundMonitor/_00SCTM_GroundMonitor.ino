@@ -1,6 +1,6 @@
 #include <OneWire.h>
 
-//Digital Sensor Pin 
+//Digital Sensor Pin
 int shockPin = 2;
 int DS18B20_Pin = 4;
 OneWire ds(DS18B20_Pin);
@@ -9,8 +9,8 @@ OneWire ds(DS18B20_Pin);
 int levelPin = A0;
 
 //INIT VAR
-int levelvalue=0;            
-int count=0;
+int levelvalue = 0;
+int count = 0;
 
 
 //SerialCom
@@ -29,28 +29,31 @@ void setup()
   attachInterrupt(0, shockCount, CHANGE);
 }
 
-void loop(){
+void loop() {
   if (stringComplete) {
     // confirm values received in serial monitor window
 
-    if (inputString=="getTemp"){
+    if (inputString == "getTemp") {
       //Serial.println("--Arduino exeCommand: getTemp ");
       Serial.println(getTemp());
     }
-    if (inputString=="getShock"){
+    if (inputString == "getShock") {
       //Serial.println("--Arduino exeCommand: getSpeed ");
-      Serial.println(getShock()); 
-    } 
-    if (inputString=="getHumidity"){
+      Serial.println(getShock());
+    }
+    if (inputString == "getHumidity") {
       // Serial.println("--Arduino exeCommand: getHumidity ");
-      Serial.println(getHumidity()); 
+      Serial.println(getHumidity());
     }
     inputString = "";
     stringComplete = false;
   }
 }
 
-float getTemp(){
+float getTemp() {
+  float TemperatureSum=120;
+  while(TemperatureSum>70){
+
   //returns the temperature from one DS18B20 in DEG Celsius
   byte data[12];
   byte addr[8];
@@ -69,9 +72,9 @@ float getTemp(){
   }
   ds.reset();
   ds.select(addr);
-  ds.write(0x44,1); // start conversion, with parasite power on at the end
+  ds.write(0x44, 1); // start conversion, with parasite power on at the end
   byte present = ds.reset();
-  ds.select(addr);    
+  ds.select(addr);
   ds.write(0xBE); // Read Scratchpad
   for (int i = 0; i < 9; i++) { // we need 9 bytes
     data[i] = ds.read();
@@ -80,7 +83,8 @@ float getTemp(){
   byte MSB = data[1];
   byte LSB = data[0];
   float tempRead = ((MSB << 8) | LSB); //using two's compliment
-  float TemperatureSum = tempRead / 16;
+  TemperatureSum = tempRead / 16;
+  }
   return TemperatureSum;
 }
 
@@ -90,19 +94,19 @@ float getShock()
   //Don't process interrupts during calculations
   detachInterrupt(0);
   //Restart the interrupt processing
-  int old=count;
-  count=0;
+  int old = count;
+  count = 0;
   attachInterrupt(0, shockCount, CHANGE);
   return (float)old;
 }
 
 // Get Ground Humidity
 int getHumidity() {
-  levelvalue = analogRead(levelPin);    
+  levelvalue = analogRead(levelPin);
   //Serial.print("RAIN VALUE = " );
   //Serial.println(sensorvalue);
 
-  levelvalue = map(levelvalue, 1023, 0, 100, 1);
+  levelvalue = map(levelvalue, 1023, 0, 1, 100);
   return (int) levelvalue;
 }
 
@@ -116,12 +120,12 @@ void shockCount()
 void serialEvent() {
   while (Serial.available()) {
     // get the new byte:
-    char inChar = (char)Serial.read(); 
+    char inChar = (char)Serial.read();
     // add it to the inputString:
     if (inChar == '=') {
       stringComplete = true;
-    } 
-    else{
+    }
+    else {
       inputString += inChar;
       // if the incoming character is a newline, set a flag
       // so the main loop can do something about it:
