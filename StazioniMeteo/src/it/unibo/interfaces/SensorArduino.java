@@ -1,12 +1,8 @@
 package it.unibo.interfaces;
 
 import it.unibo.debugger.OnBoardDebugger;
-import it.unibo.sensors.impl.LevelSensorArduino;
-import it.unibo.station.impl.AirMonitor;
 import it.unibo.util.AttendRispThread;
-import it.unibo.util.Coordinate;
 import it.unibo.util.FloatMeasure;
-import it.unibo.util.IMeasure;
 import it.unibo.util.IntMeasure;
 import it.unibo.util.SerialCom;
 

@@ -50,14 +50,14 @@ public class OnBoardDebugger {
 		System.out.println("Sensor:" + sen.getName()
 				+ " no replay to embedded machine");
 		// OPEN CONNECTION
-		DbCom sm = new DbCom("root", "root");
+		DbCom sm = new DbCom();
 		String erDesc = "Error Detected form \nStation:" + station.getName()
 				+ "\nSensor:" + sen.getName()
 				+ "\nError:Sensor no replay to embedded machine";
 		// Query
 		sm.sendErr(Integer.toString(station.ID), sen.getName(), "SDE", erDesc);
 		// CLOSE CONNECTION
-		sm.turnOffConnection("root", "root");
+		sm.turnOffConnection();
 	}
 
 	/**
@@ -75,14 +75,14 @@ public class OnBoardDebugger {
 		// OPEN CONNECTION
 		System.out.println("SensorComPort of " + sen.getName()
 				+ "  is occupated on embedded machine");
-		DbCom sm = new DbCom("root", "root");
+		DbCom sm = new DbCom();
 		String erDesc = "Error Detected form \nStation:" + station.getName()
 				+ "\nSensor:" + sen.getName()
 				+ "\nError:Serial Occupated on embedded machine";
 		// Query
 		sm.sendErr(Integer.toString(station.ID), sen.getName(), "SCE", erDesc);
 		// CLOSE CONNECTION
-		sm.turnOffConnection("root", "root");
+		sm.turnOffConnection();
 	}
 
 	public static void main(String[] args) {

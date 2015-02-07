@@ -2,6 +2,8 @@ package it.unibo.system;
 
 import it.unibo.interfaces.StationRPI;
 import it.unibo.util.AssembledList;
+import it.unibo.util.Configurator;
+
 import java.io.IOException;
 import java.sql.*;
 import java.text.DateFormat;
@@ -14,27 +16,39 @@ import java.util.List;
 
 /**
  * 
+ * db com serves to communicate with the server, mainly deals with creating
+ * queries or turn them over to the server, format the data as required and
+ * return them. Need USER e PASSWORD per il DB, il PATH DEL DB.
+ * 
  * @author matteo.mariani11@studio.unibo.it
  * @version 1.0.0
- * @since  06/feb/2015 01:36:09
+ * @since 07/feb/2015 14:11:36
  *
  */
 public class DbCom {
 	Connection db;
-	String user;
-	String password;
+	private String user;
+	private String password;
+	private String path;
 	String TABLE;
 	String componentsTable;
+	Configurator conf;
+	String dbName;
 
-	public DbCom(String user, String password) {
-		this.user = user;
-		this.password = password;
-		
+	/**
+	 * DataBase Communication Constructor set param for connection get from conf
+	 * file
+	 */
+	public DbCom() {
+		conf = new Configurator("conf.xml", "configuration");
+		user = conf.getTagValueSTR("DB_USER");
+		password = conf.getTagValueSTR("DB_PASS");
+		path = conf.getTagValueSTR("DB_PATH");
+		dbName = conf.getTagValueSTR("DB_NAME");
 		try {
 			Class.forName("com.mysql.jdbc.Driver").newInstance();
-			db = DriverManager.getConnection("jdbc:mysql://127.0.0.1/"
-					+ "RCSdb" + "?user=" + user + "&password=" + password);
-
+			db = DriverManager.getConnection(path + dbName + "?user=" + user
+					+ "&password=" + password);
 		} catch (InstantiationException | IllegalAccessException
 				| ClassNotFoundException e) {
 			e.printStackTrace();
@@ -43,14 +57,22 @@ public class DbCom {
 		}
 	}
 
+	/**
+	 * Send measure to DB need to know Sation and his last Update measure list
+	 * read all measure and update them to DB
+	 * 
+	 * @param stat
+	 *            Input station for data
+	 * @param lastUpdate
+	 *            Last measure received from sensor
+	 */
 	public void sendMes(StationRPI stat, List<AssembledList> lastUpdate) {
-
 		Statement stmt;
 		DateFormat df = new SimpleDateFormat("yy/MM/dd HH:mm:ss");
 		Calendar calobj = Calendar.getInstance();
 		Iterator<AssembledList> itLast = lastUpdate.iterator();
 		while (itLast.hasNext()) {
-			AssembledList row = (AssembledList)itLast.next();
+			AssembledList row = (AssembledList) itLast.next();
 			if (row != null) {
 				try {
 					stmt = (Statement) db.createStatement();
@@ -65,8 +87,7 @@ public class DbCom {
 									+ row.lastMes.getValue()
 									+ "', '"
 									+ stat.ID
-									+ "', '"
-									+ row.sen.getName() + "');");
+									+ "', '" + row.sen.getName() + "');");
 					stmt.execute("INSERT INTO `RCSdb`.`Measure` (`desc`, `dataObtained`, `datatype`, `reliability`, `value`, `Assembled_Stations_idStations`, `Assembled_Sensors_idSen`) VALUES ('getFrom"
 							+ stat.getName()
 							+ "', '"
@@ -77,8 +98,7 @@ public class DbCom {
 							+ row.lastMes.getValue()
 							+ "', '"
 							+ stat.ID
-							+ "', '"
-							+ row.sen.getName() + "');");
+							+ "', '" + row.sen.getName() + "');");
 				} catch (SQLException e) {
 					e.printStackTrace();
 				}
@@ -87,24 +107,14 @@ public class DbCom {
 
 	}
 
-	public void getMes(String column) {
-
-		Statement stmt;
-		try {
-			stmt = (Statement) db.createStatement();
-			String query = "SELECT * FROM rcsdb.measure";
-			ResultSet rs = stmt.executeQuery(query);
-			System.out.println("SELECT idMes FROM rcsdb.measure");
-			while (rs.next()) {
-				int id = rs.getInt(column);
-				System.out.println(id);
-			}
-		} catch (SQLException e) {
-			e.printStackTrace();
-		}
-
-	}
-
+	/**
+	 * Used for update state on DB
+	 * 
+	 * @param stationID
+	 *            Station to update
+	 * @param stat
+	 *            Actual State of Station
+	 */
 	public void stationStateUpdate(String stationID, String stat) {
 		System.out
 
@@ -120,6 +130,17 @@ public class DbCom {
 
 	}
 
+	/**
+	 * 
+	 * Used to update state of sensor on DB
+	 * 
+	 * @param stationID
+	 *            stationID Station for link on DB
+	 * @param sensor
+	 *            Sensor to update
+	 * @param stat
+	 *            Actual state of Sensor
+	 */
 	public void sensorStateUpdate(String stationID, String sensor, String stat) {
 		System.out
 
@@ -137,6 +158,20 @@ public class DbCom {
 
 	}
 
+	/**
+	 * 
+	 * Upload error on DB, with String param we can find correct data error
+	 * format
+	 * 
+	 * @param statID
+	 *            Station primary key
+	 * @param senName
+	 *            Sensor pimary key
+	 * @param type
+	 *            ErrorType
+	 * @param erDesc
+	 *            Error Desc
+	 */
 	public void sendErr(String statID, String senName, String type,
 			String erDesc) {
 
@@ -175,15 +210,10 @@ public class DbCom {
 
 	}
 
-	public static void main(String Args[]) throws SQLException,
-			ClassNotFoundException, IllegalAccessException,
-			InstantiationException, IOException {
-		DbCom c = new DbCom("root", "root");
-		c.getMes("value");
-
-	}
-
-	public void turnOffConnection(String user, String password) {
+	/**
+	 * Used for close DB communication
+	 */
+	public void turnOffConnection() {
 		try {
 			db.close();
 		} catch (SQLException e) {
@@ -191,6 +221,15 @@ public class DbCom {
 		}
 	}
 
+	/**
+	 * Query view used to get an intger value
+	 * 
+	 * @param query
+	 *            Query String to call on DB
+	 * @param field
+	 *            Field result selection
+	 * @return All value content on Field from Query list result
+	 */
 	public ArrayList getQuerySingleValueInt(String query, String field) {
 		Statement stmt;
 		List<Object> list = new ArrayList();
@@ -208,6 +247,15 @@ public class DbCom {
 		return (ArrayList) list;
 	}
 
+	/**
+	 * Query view used to get an String value
+	 * 
+	 * @param query
+	 *            Query String to call on DB
+	 * @param field
+	 *            Field result selection
+	 * @return All value content on Field from Query list result
+	 */
 	public ArrayList getQuerySingleValueString(String query, String field) {
 		Statement stmt;
 		List<Object> list = new ArrayList();
@@ -226,6 +274,16 @@ public class DbCom {
 		return (ArrayList) list;
 	}
 
+	/**
+	 * Used to get # of days from last update measure, used for check
+	 * reliability of data
+	 * 
+	 * @param query
+	 *            Query String to call on DB
+	 * @param field
+	 *            Field result selection
+	 * @return # of days
+	 */
 	public int getLastUpdateDayDifference(String query, String field) {
 		Statement stmt;
 		List<Integer> list = new ArrayList<Integer>();
@@ -257,5 +315,12 @@ public class DbCom {
 		} else {
 			return (list.get(list.size() - 1));
 		}
+	}
+
+	public static void main(String Args[]) throws SQLException,
+			ClassNotFoundException, IllegalAccessException,
+			InstantiationException, IOException {
+		DbCom c = new DbCom();
+
 	}
 }

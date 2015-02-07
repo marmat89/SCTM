@@ -1,7 +1,5 @@
 package it.unibo.interfaces;
 
-import it.unibo.util.IMeasure;
-
 /**
  * sensor simulated for testing prototype
  * 
