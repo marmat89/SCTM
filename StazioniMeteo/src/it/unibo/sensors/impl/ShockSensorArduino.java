@@ -42,13 +42,13 @@ public class ShockSensorArduino extends SensorArduino {
 			arduino.sendData("getShock=");
 			// used for attend sensor respond for N seconds
 			attendSerialCom();
-			return getFloatValue();
+			return getIntValue();
 		} else
 			return null;
 	}
 
 	public static void main(String[] args) {
-		SpeedSensorArduino testSens = new SpeedSensorArduino("HC020K", "SPD");
+		ShockSensorArduino testSens = new ShockSensorArduino("HC020K", "SPD");
 		System.out.println("Create new SENSOR name:" + testSens.getName()
 				+ " with dataType:" + testSens.getDatatype());
 		System.out.println("Test simulated measure:"
