@@ -88,6 +88,9 @@ void rpm_fun()
 }
 
 float getTemp(){
+  
+  float TemperatureSum=120;
+  while(TemperatureSum>70){
   //returns the temperature from one DS18B20 in DEG Celsius
   byte data[12];
   byte addr[8];
@@ -118,8 +121,8 @@ float getTemp(){
   byte LSB = data[0];
   float tempRead = ((MSB << 8) | LSB); //using two's compliment
   float TemperatureSum = tempRead / 16;
+   }
   return TemperatureSum;
-
 }
 int getHumidity(){
   //Serial.println("Type,\tstatus,\tHumidity (%),\tTemperature (C)");
@@ -137,7 +140,7 @@ int getRain() {
   rainvalue = analogRead(rainPin);    
   //Serial.print("RAIN VALUE = " );
   //Serial.println(sensorvalue);
-  rainvalue = map(rainvalue, 1023, 1, 0, 100);
+  rainvalue = map(rainvalue,0, 1023, 100, 1);
   return (int)rainvalue;
 }
 int getLight() {
@@ -145,7 +148,7 @@ int getLight() {
   //Serial.print("LIGHT VALUE = " );
   //Serial.println(lightvalue);
 
-  lightvalue = map(lightvalue, 1023, 1, 0, 100);
+  lightvalue = map(lightvalue, 0, 1023, 100, 1);
   return (int)lightvalue;
 }
 void serialEvent() {
