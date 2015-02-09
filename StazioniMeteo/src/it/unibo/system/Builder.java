@@ -85,7 +85,6 @@ public class Builder {
 		OnBoardDebugger deb = new OnBoardDebugger(testGND);
 		testGND.addTemperatureSensor(new TempSensorArduino("DS18B20", "TMP",
 				deb));
-		// testGND.addTiltSensor(new TiltSensorSim("TLTECO", "ALL"));
 		testGND.addHumiditySensor(new HumidSensorArduino("HGMECO", "HMD", deb));
 		testGND.addDipSensor(new ShockSensorArduino("TLTECO", "ALL", deb));
 
@@ -105,10 +104,10 @@ public class Builder {
 	public static void main(String[] args) throws InterruptedException {
 		
 		Builder bl = new Builder();
-//		bl.CreateMonitor("Air", "SimulatedAirStationCesena", new Coordinate(
-//				44.139307, 12.237057), 3);
-		bl.CreateMonitor("Ground", "SimulatedGroundStationCesena",
-				new Coordinate(44.139307, 12.237057), 2);
+		bl.CreateMonitor("Air", "SimulatedAirStationCesena", new Coordinate(
+				44.139307, 12.237057), 3);
+//		bl.CreateMonitor("Ground", "SimulatedGroundStationCesena",
+//				new Coordinate(44.139307, 12.237057), 2);
 
 //		bl.CreateMonitor("Water", "SimulatedWaterStationCesena",
 //				new Coordinate(44.139307, 12.237057), 1);

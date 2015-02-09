@@ -61,7 +61,6 @@ public class OnlineDebugger {
 			
 			int failCount = 0;
 			boolean find = true;
-			if (i.size()>0)
 	if (i.size() > 0) {
 				list = i.iterator();
 				while (list.hasNext() && find) {

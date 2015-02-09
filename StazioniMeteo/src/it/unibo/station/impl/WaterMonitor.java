@@ -51,7 +51,7 @@ public class WaterMonitor extends StationRPI {
 	}
 
 	public List<AssembledList> monitorUpdates() {
-
+		
 		mesList.clear();
 		List<Sensor> sensors = this.getSensorList();
 		Iterator itSen = sensors.iterator();
@@ -68,40 +68,7 @@ public class WaterMonitor extends StationRPI {
 						+ "monitor find");
 			}}
 		}
-		// public List<Measure> monitorUpdates() {
-		// mesList = new ArrayList();
-		// if (temperature != null) {
-		// mesList.add((FloatMeasure) temperature.getSurvey());
-		// System.out.println("UPDATE | "
-		// + temperature.getName()
-		// + " => "
-		// + ((FloatMeasure) mesList.get(mesList.size() - 1))
-		// .getValue() + ""
-		// + mesList.get(mesList.size() - 1).getUOM());
-		// } else {
-		// System.err.println("ALLERT | no temperature monitor find");
-		// }
-		// if (level != null) {
-		// mesList.add((IntMeasure) level.getSurvey());
-		// System.out.println("UPDATE | "
-		// + level.getName()
-		// + " => "
-		// + ((IntMeasure) mesList.get(mesList.size() - 1))
-		// .getValue() + ""
-		// + mesList.get(mesList.size() - 1).getUOM());
-		// } else {
-		// System.err.println("ALLERT | no level monitor find");
-		// }
-		// if (speed != null) {
-		// mesList.add((FloatMeasure) speed.getSurvey());
-		// System.out.println("UPDATE | "
-		// + speed.getName()
-		// + " => "
-		// + ((FloatMeasure) mesList.get(mesList.size() - 1))
-		// .getValue());
-		// } else {
-		// System.err.println("ALLERT | no speed monitor find");
-		// }
+		
 		return mesList;
 	}
 

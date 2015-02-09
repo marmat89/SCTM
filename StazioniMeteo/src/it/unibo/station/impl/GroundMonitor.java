@@ -79,49 +79,6 @@ public class GroundMonitor extends StationRPI {
 				}
 			}
 		}
-		// mesList = new ArrayList();
-		// if (temperature != null) {
-		// mesList.add((FloatMeasure) temperature.getSurvey());
-		// System.out.println("UPDATE | "
-		// + temperature.getName()
-		// + " => "
-		// + ((FloatMeasure) mesList.get(mesList.size() - 1))
-		// .getValue() + ""
-		// + mesList.get(mesList.size() - 1).getUOM());
-		// } else {
-		// System.err.println("ALLERT | no temperature monitor find");
-		// }
-		// if (humidity != null) {
-		// mesList.add((IntMeasure) humidity.getSurvey());
-		// System.out.println("UPDATE | "
-		// + humidity.getName()
-		// + " => "
-		// + ((IntMeasure) mesList.get(mesList.size() - 1))
-		// .getValue() + ""
-		// + mesList.get(mesList.size() - 1).getUOM());
-		// } else {
-		// System.err.println("ALLERT | no humidity monitor find");
-		// }
-		// if (tilt != null) {
-		// mesList.add((BooleanMeasure) tilt.getSurvey());
-		// System.out.println("UPDATE | "
-		// + tilt.getName()
-		// + " => "
-		// + ((BooleanMeasure) mesList.get(mesList.size() - 1))
-		// .isChanged());
-		// } else {
-		// System.err.println("ALLERT | no tilt monitor find");
-		// }
-		// if (dip != null) {
-		// mesList.add((BooleanMeasure) dip.getSurvey());
-		// System.out.println("UPDATE | "
-		// + dip.getName()
-		// + " => "
-		// + ((BooleanMeasure) mesList.get(mesList.size() - 1))
-		// .isChanged());
-		// } else {
-		// System.err.println("ALLERT | no inclinazione monitor find");
-		// }
 		return mesList;
 	}
 
