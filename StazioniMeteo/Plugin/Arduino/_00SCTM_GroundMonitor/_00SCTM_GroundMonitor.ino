@@ -89,7 +89,7 @@ float getTemp() {
 }
 
 //count shock of station
-float getShock()
+int getShock()
 {
   //Don't process interrupts during calculations
   detachInterrupt(0);
@@ -97,7 +97,7 @@ float getShock()
   int old = count;
   count = 0;
   attachInterrupt(0, shockCount, CHANGE);
-  return (float)old;
+  return (int)old;
 }
 
 // Get Ground Humidity

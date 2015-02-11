@@ -96,20 +96,19 @@ public class Builder {
 	public void addWaterSensor() {
 		OnBoardDebugger deb = new OnBoardDebugger(testWTR);
 
-		testWTR.addTemperatureSensor(new TempSensorSim("DS18B20", "TMP"));
+		testWTR.addTemperatureSensor(new TempSensorArduino("DS18B20", "TMP"));
 		testWTR.addLevelSensor(new LevelSensorArduino("WSECO", "WL",deb));
-		testWTR.addSpeedSensor(new SpeedSensorSim("HC020K", "SPD"));
+		testWTR.addSpeedSensor(new SpeedSensorArduino("HC020K", "SPD"));
 	}
 
 	public static void main(String[] args) throws InterruptedException {
 		
 		Builder bl = new Builder();
-		bl.CreateMonitor("Air", "SimulatedAirStationCesena", new Coordinate(
-				44.139307, 12.237057), 3);
-//		bl.CreateMonitor("Ground", "SimulatedGroundStationCesena",
-//				new Coordinate(44.139307, 12.237057), 2);
+//		bl.CreateMonitor("Air"I37057), 3);
+		bl.CreateMonitor("Ground", "SimulatedGroundStationCesena",
+				new Coordinate(44.139307, 12.237057), 2);
 
-//		bl.CreateMonitor("Water", "SimulatedWaterStationCesena",
+//		bl.CreateMonitor("Water", "WaterStationCesena",
 //				new Coordinate(44.139307, 12.237057), 1);
 
 		//
