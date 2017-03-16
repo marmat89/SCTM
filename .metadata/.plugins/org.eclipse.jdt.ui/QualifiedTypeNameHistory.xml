@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<qualifiedTypeNameHistroy>
+<fullyQualifiedTypeName name="java.io.BufferedReader"/>
+<fullyQualifiedTypeName name="java.io.InputStreamReader"/>
+<fullyQualifiedTypeName name="java.io.FileInputStream"/>
+<fullyQualifiedTypeName name="java.io.FileNotFoundException"/>
+<fullyQualifiedTypeName name="java.util.Date"/>
+<fullyQualifiedTypeName name="java.text.DateFormat"/>
+<fullyQualifiedTypeName name="java.text.SimpleDateFormat"/>
+<fullyQualifiedTypeName name="org.jfree.ui.ApplicationFrame"/>
+<fullyQualifiedTypeName name="org.jfree.data.general.PieDataset"/>
+<fullyQualifiedTypeName name="org.jfree.chart.JFreeChart"/>
+<fullyQualifiedTypeName name="org.jfree.chart.ChartPanel"/>
+<fullyQualifiedTypeName name="org.jfree.data.general.DefaultPieDataset"/>
+<fullyQualifiedTypeName name="org.jfree.chart.ChartFactory"/>
+<fullyQualifiedTypeName name="org.jfree.chart.plot.PiePlot"/>
+<fullyQualifiedTypeName name="org.jfree.ui.RefineryUtilities"/>
+<fullyQualifiedTypeName name="org.jfree.chart.labels.StandardPieSectionLabelGenerator"/>
+<fullyQualifiedTypeName name="javax.swing.JPanel"/>
+</qualifiedTypeNameHistroy>

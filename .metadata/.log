@@ -1,0 +1,1104 @@
+!SESSION 2015-06-30 12:28:25.748 -----------------------------------------------
+eclipse.buildId=4.4.1.M20140925-0400
+java.version=1.8.0_31
+java.vendor=Oracle Corporation
+BootLoader constants: OS=win32, ARCH=x86_64, WS=win32, NL=en_US
+Command-line arguments:  -data D:\General Workspace\SCTM -os win32 -ws win32 -arch x86_64
+
+!ENTRY org.eclipse.emf.ecore 2 0 2015-06-30 12:28:27.958
+!MESSAGE Both 'it.unibo.xtext.robot.ui' and 'it.unibo.xtext.highRobot.spec.ui' register an extension parser for 'ddr'
+
+!ENTRY org.eclipse.egit.ui 2 0 2015-06-30 12:28:33.065
+!MESSAGE Warning: EGit couldn't detect the installation path "gitPrefix" of native Git. Hence EGit can't respect system level
+Git settings which might be configured in ${gitPrefix}/etc/gitconfig under the native Git installation directory.
+The most important of these settings is core.autocrlf. Git for Windows by default sets this parameter to true in
+this system level configuration. The Git installation location can be configured on the
+Team > Git > Configuration preference page's 'System Settings' tab.
+This warning can be switched off on the Team > Git > Confirmations and Warnings preference page.
+
+!ENTRY org.eclipse.egit.ui 2 0 2015-06-30 12:28:33.066
+!MESSAGE Warning: The environment variable HOME is not set. The following directory will be used to store the Git
+user global configuration and to define the default location to store repositories: 'C:\Users\MarMat89'. If this is
+not correct please set the HOME environment variable and restart Eclipse. Otherwise Git for Windows and
+EGit might behave differently since they see different configuration options.
+This warning can be switched off on the Team > Git > Confirmations and Warnings preference page.
+
+!ENTRY org.apache.log4j 2 0 2015-06-30 12:29:07.621
+!MESSAGE org.eclipse.xtext.internal.ExtensionResourceServiceProviderRegistryReader  - Both 'it.unibo.xtext.robot.ui' and 'it.unibo.xtext.highRobot.spec.ui' register a content parser for 'ddr'
+
+
+!ENTRY org.eclipse.equinox.p2.transport.ecf 2 0 2015-06-30 13:13:37.882
+!MESSAGE Connection to http://download.eclipse.org/modeling/tmf/xtext/updates/releases/head/R201409021032/artifacts.jar failed on Connection to http://download.eclipse.org refused. Retry attempt 0 started
+!STACK 0
+org.apache.http.conn.HttpHostConnectException: Connection to http://download.eclipse.org refused
+	at org.apache.http.impl.conn.DefaultClientConnectionOperator.openConnection(DefaultClientConnectionOperator.java:190)
+	at org.apache.http.impl.conn.AbstractPoolEntry.open(AbstractPoolEntry.java:151)
+	at org.apache.http.impl.conn.AbstractPooledConnAdapter.open(AbstractPooledConnAdapter.java:125)
+	at org.apache.http.impl.client.DefaultRequestDirector.tryConnect(DefaultRequestDirector.java:643)
+	at org.apache.http.impl.client.DefaultRequestDirector.execute(DefaultRequestDirector.java:479)
+	at org.apache.http.impl.client.AbstractHttpClient.execute(AbstractHttpClient.java:906)
+	at org.apache.http.impl.client.AbstractHttpClient.execute(AbstractHttpClient.java:805)
+	at org.eclipse.ecf.provider.filetransfer.httpclient4.HttpClientRetrieveFileTransfer.performConnect(HttpClientRetrieveFileTransfer.java:1077)
+	at org.eclipse.ecf.provider.filetransfer.httpclient4.HttpClientRetrieveFileTransfer.access$0(HttpClientRetrieveFileTransfer.java:1068)
+	at org.eclipse.ecf.provider.filetransfer.httpclient4.HttpClientRetrieveFileTransfer$1.performFileTransfer(HttpClientRetrieveFileTransfer.java:1064)
+	at org.eclipse.ecf.filetransfer.FileTransferJob.run(FileTransferJob.java:73)
+	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:54)
+Caused by: java.net.ConnectException: Connection timed out: connect
+	at java.net.DualStackPlainSocketImpl.waitForConnect(Native Method)
+	at java.net.DualStackPlainSocketImpl.socketConnect(Unknown Source)
+	at java.net.AbstractPlainSocketImpl.doConnect(Unknown Source)
+	at java.net.AbstractPlainSocketImpl.connectToAddress(Unknown Source)
+	at java.net.AbstractPlainSocketImpl.connect(Unknown Source)
+	at java.net.PlainSocketImpl.connect(Unknown Source)
+	at java.net.SocksSocketImpl.connect(Unknown Source)
+	at java.net.Socket.connect(Unknown Source)
+	at org.eclipse.ecf.internal.provider.filetransfer.httpclient4.ECFHttpClientProtocolSocketFactory.connectSocket(ECFHttpClientProtocolSocketFactory.java:84)
+	at org.apache.http.impl.conn.DefaultClientConnectionOperator.openConnection(DefaultClientConnectionOperator.java:180)
+	... 11 more
+!SESSION 2015-06-30 13:18:21.509 -----------------------------------------------
+eclipse.buildId=4.4.2.M20150204-1700
+java.version=1.8.0_31
+java.vendor=Oracle Corporation
+BootLoader constants: OS=win32, ARCH=x86_64, WS=win32, NL=en_US
+Command-line arguments:  -data D:\General Workspace\SCTM -os win32 -ws win32 -arch x86_64
+
+!ENTRY org.eclipse.emf.ecore 2 0 2015-06-30 13:18:30.231
+!MESSAGE Both 'it.unibo.xtext.robot.ui' and 'it.unibo.xtext.highRobot.spec.ui' register an extension parser for 'ddr'
+
+!ENTRY org.apache.log4j 2 0 2015-06-30 13:18:33.998
+!MESSAGE org.eclipse.xtext.internal.ExtensionResourceServiceProviderRegistryReader  - Both 'it.unibo.xtext.robot.ui' and 'it.unibo.xtext.highRobot.spec.ui' register a content parser for 'ddr'
+
+
+!ENTRY org.eclipse.egit.ui 2 0 2015-06-30 13:18:36.526
+!MESSAGE Warning: EGit couldn't detect the installation path "gitPrefix" of native Git. Hence EGit can't respect system level
+Git settings which might be configured in ${gitPrefix}/etc/gitconfig under the native Git installation directory.
+The most important of these settings is core.autocrlf. Git for Windows by default sets this parameter to true in
+this system level configuration. The Git installation location can be configured on the
+Team > Git > Configuration preference page's 'System Settings' tab.
+This warning can be switched off on the Team > Git > Confirmations and Warnings preference page.
+
+!ENTRY org.eclipse.egit.ui 2 0 2015-06-30 13:18:36.527
+!MESSAGE Warning: The environment variable HOME is not set. The following directory will be used to store the Git
+user global configuration and to define the default location to store repositories: 'C:\Users\MarMat89'. If this is
+not correct please set the HOME environment variable and restart Eclipse. Otherwise Git for Windows and
+EGit might behave differently since they see different configuration options.
+This warning can be switched off on the Team > Git > Confirmations and Warnings preference page.
+!SESSION 2015-06-30 16:37:01.101 -----------------------------------------------
+eclipse.buildId=4.4.2.M20150204-1700
+java.version=1.8.0_31
+java.vendor=Oracle Corporation
+BootLoader constants: OS=win32, ARCH=x86_64, WS=win32, NL=en_US
+Command-line arguments:  -os win32 -ws win32 -arch x86_64
+
+!ENTRY org.eclipse.emf.ecore 2 0 2015-06-30 16:37:12.083
+!MESSAGE Both 'it.unibo.xtext.robot.ui' and 'it.unibo.xtext.highRobot.spec.ui' register an extension parser for 'ddr'
+
+!ENTRY org.apache.log4j 2 0 2015-06-30 16:37:16.962
+!MESSAGE org.eclipse.xtext.internal.ExtensionResourceServiceProviderRegistryReader  - Both 'it.unibo.xtext.robot.ui' and 'it.unibo.xtext.highRobot.spec.ui' register a content parser for 'ddr'
+
+
+!ENTRY org.eclipse.egit.ui 2 0 2015-06-30 16:37:22.785
+!MESSAGE Warning: EGit couldn't detect the installation path "gitPrefix" of native Git. Hence EGit can't respect system level
+Git settings which might be configured in ${gitPrefix}/etc/gitconfig under the native Git installation directory.
+The most important of these settings is core.autocrlf. Git for Windows by default sets this parameter to true in
+this system level configuration. The Git installation location can be configured on the
+Team > Git > Configuration preference page's 'System Settings' tab.
+This warning can be switched off on the Team > Git > Confirmations and Warnings preference page.
+
+!ENTRY org.eclipse.egit.ui 2 0 2015-06-30 16:37:22.786
+!MESSAGE Warning: The environment variable HOME is not set. The following directory will be used to store the Git
+user global configuration and to define the default location to store repositories: 'C:\Users\MarMat89'. If this is
+not correct please set the HOME environment variable and restart Eclipse. Otherwise Git for Windows and
+EGit might behave differently since they see different configuration options.
+This warning can be switched off on the Team > Git > Confirmations and Warnings preference page.
+!SESSION 2015-06-30 16:41:33.110 -----------------------------------------------
+eclipse.buildId=4.4.2.M20150204-1700
+java.version=1.8.0_31
+java.vendor=Oracle Corporation
+BootLoader constants: OS=win32, ARCH=x86_64, WS=win32, NL=en_US
+Command-line arguments:  -os win32 -ws win32 -arch x86_64
+
+!ENTRY org.eclipse.emf.ecore 2 0 2015-06-30 16:41:41.526
+!MESSAGE Both 'it.unibo.xtext.robot.ui' and 'it.unibo.xtext.highRobot.spec.ui' register an extension parser for 'ddr'
+
+!ENTRY org.apache.log4j 2 0 2015-06-30 16:41:46.318
+!MESSAGE org.eclipse.xtext.internal.ExtensionResourceServiceProviderRegistryReader  - Both 'it.unibo.xtext.robot.ui' and 'it.unibo.xtext.highRobot.spec.ui' register a content parser for 'ddr'
+
+
+!ENTRY org.eclipse.egit.ui 2 0 2015-06-30 16:41:52.049
+!MESSAGE Warning: EGit couldn't detect the installation path "gitPrefix" of native Git. Hence EGit can't respect system level
+Git settings which might be configured in ${gitPrefix}/etc/gitconfig under the native Git installation directory.
+The most important of these settings is core.autocrlf. Git for Windows by default sets this parameter to true in
+this system level configuration. The Git installation location can be configured on the
+Team > Git > Configuration preference page's 'System Settings' tab.
+This warning can be switched off on the Team > Git > Confirmations and Warnings preference page.
+
+!ENTRY org.eclipse.egit.ui 2 0 2015-06-30 16:41:52.049
+!MESSAGE Warning: The environment variable HOME is not set. The following directory will be used to store the Git
+user global configuration and to define the default location to store repositories: 'C:\Users\MarMat89'. If this is
+not correct please set the HOME environment variable and restart Eclipse. Otherwise Git for Windows and
+EGit might behave differently since they see different configuration options.
+This warning can be switched off on the Team > Git > Confirmations and Warnings preference page.
+!SESSION 2015-06-30 17:55:56.281 -----------------------------------------------
+eclipse.buildId=4.4.2.M20150204-1700
+java.version=1.8.0_31
+java.vendor=Oracle Corporation
+BootLoader constants: OS=win32, ARCH=x86_64, WS=win32, NL=en_US
+Command-line arguments:  -os win32 -ws win32 -arch x86_64
+
+!ENTRY org.eclipse.emf.ecore 2 0 2015-06-30 17:56:03.134
+!MESSAGE Both 'it.unibo.xtext.robot.ui' and 'it.unibo.xtext.highRobot.spec.ui' register an extension parser for 'ddr'
+
+!ENTRY org.apache.log4j 2 0 2015-06-30 17:56:08.080
+!MESSAGE org.eclipse.xtext.internal.ExtensionResourceServiceProviderRegistryReader  - Both 'it.unibo.xtext.robot.ui' and 'it.unibo.xtext.highRobot.spec.ui' register a content parser for 'ddr'
+
+
+!ENTRY org.eclipse.egit.ui 2 0 2015-06-30 17:56:13.653
+!MESSAGE Warning: EGit couldn't detect the installation path "gitPrefix" of native Git. Hence EGit can't respect system level
+Git settings which might be configured in ${gitPrefix}/etc/gitconfig under the native Git installation directory.
+The most important of these settings is core.autocrlf. Git for Windows by default sets this parameter to true in
+this system level configuration. The Git installation location can be configured on the
+Team > Git > Configuration preference page's 'System Settings' tab.
+This warning can be switched off on the Team > Git > Confirmations and Warnings preference page.
+
+!ENTRY org.eclipse.egit.ui 2 0 2015-06-30 17:56:13.653
+!MESSAGE Warning: The environment variable HOME is not set. The following directory will be used to store the Git
+user global configuration and to define the default location to store repositories: 'C:\Users\MarMat89'. If this is
+not correct please set the HOME environment variable and restart Eclipse. Otherwise Git for Windows and
+EGit might behave differently since they see different configuration options.
+This warning can be switched off on the Team > Git > Confirmations and Warnings preference page.
+!SESSION 2015-07-01 14:35:12.174 -----------------------------------------------
+eclipse.buildId=4.4.2.M20150204-1700
+java.version=1.8.0_31
+java.vendor=Oracle Corporation
+BootLoader constants: OS=win32, ARCH=x86_64, WS=win32, NL=en_US
+Command-line arguments:  -os win32 -ws win32 -arch x86_64
+
+!ENTRY org.eclipse.core.resources 4 567 2015-07-01 14:35:18.961
+!MESSAGE Workspace restored, but some problems occurred.
+!SUBENTRY 1 org.eclipse.core.resources 4 567 2015-07-01 14:35:18.961
+!MESSAGE Could not read metadata for 'MyAnt_2.1'.
+!STACK 1
+org.eclipse.core.internal.resources.ResourceException: The project description file (.project) for 'MyAnt_2.1' is missing.  This file contains important information about the project.  The project will not function properly until this file is restored.
+	at org.eclipse.core.internal.localstore.FileSystemResourceManager.read(FileSystemResourceManager.java:851)
+	at org.eclipse.core.internal.resources.SaveManager.restoreMetaInfo(SaveManager.java:884)
+	at org.eclipse.core.internal.resources.SaveManager.restoreMetaInfo(SaveManager.java:864)
+	at org.eclipse.core.internal.resources.SaveManager.restore(SaveManager.java:715)
+	at org.eclipse.core.internal.resources.SaveManager.startup(SaveManager.java:1565)
+	at org.eclipse.core.internal.resources.Workspace.startup(Workspace.java:2464)
+	at org.eclipse.core.internal.resources.Workspace.open(Workspace.java:2219)
+	at org.eclipse.core.resources.ResourcesPlugin.start(ResourcesPlugin.java:447)
+	at org.eclipse.osgi.internal.framework.BundleContextImpl$3.run(BundleContextImpl.java:771)
+	at org.eclipse.osgi.internal.framework.BundleContextImpl$3.run(BundleContextImpl.java:1)
+	at java.security.AccessController.doPrivileged(Native Method)
+	at org.eclipse.osgi.internal.framework.BundleContextImpl.startActivator(BundleContextImpl.java:764)
+	at org.eclipse.osgi.internal.framework.BundleContextImpl.start(BundleContextImpl.java:721)
+	at org.eclipse.osgi.internal.framework.EquinoxBundle.startWorker0(EquinoxBundle.java:936)
+	at org.eclipse.osgi.internal.framework.EquinoxBundle$EquinoxModule.startWorker(EquinoxBundle.java:319)
+	at org.eclipse.osgi.container.Module.doStart(Module.java:571)
+	at org.eclipse.osgi.container.Module.start(Module.java:439)
+	at org.eclipse.osgi.framework.util.SecureAction.start(SecureAction.java:454)
+	at org.eclipse.osgi.internal.hooks.EclipseLazyStarter.postFindLocalClass(EclipseLazyStarter.java:107)
+	at org.eclipse.osgi.internal.loader.classpath.ClasspathManager.findLocalClass(ClasspathManager.java:531)
+	at org.eclipse.osgi.internal.loader.ModuleClassLoader.findLocalClass(ModuleClassLoader.java:324)
+	at org.eclipse.osgi.internal.loader.BundleLoader.findLocalClass(BundleLoader.java:320)
+	at org.eclipse.osgi.internal.loader.sources.SingleSourcePackage.loadClass(SingleSourcePackage.java:36)
+	at org.eclipse.osgi.internal.loader.BundleLoader.findClassInternal(BundleLoader.java:391)
+	at org.eclipse.osgi.internal.loader.BundleLoader.findClass(BundleLoader.java:345)
+	at org.eclipse.osgi.internal.loader.BundleLoader.findClass(BundleLoader.java:337)
+	at org.eclipse.osgi.internal.loader.ModuleClassLoader.loadClass(ModuleClassLoader.java:160)
+	at java.lang.ClassLoader.loadClass(Unknown Source)
+	at org.eclipse.ui.internal.ide.application.IDEApplication.start(IDEApplication.java:136)
+	at org.eclipse.equinox.internal.app.EclipseAppHandle.run(EclipseAppHandle.java:196)
+	at org.eclipse.core.runtime.internal.adaptor.EclipseAppLauncher.runApplication(EclipseAppLauncher.java:134)
+	at org.eclipse.core.runtime.internal.adaptor.EclipseAppLauncher.start(EclipseAppLauncher.java:104)
+	at org.eclipse.core.runtime.adaptor.EclipseStarter.run(EclipseStarter.java:380)
+	at org.eclipse.core.runtime.adaptor.EclipseStarter.run(EclipseStarter.java:235)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(Unknown Source)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(Unknown Source)
+	at java.lang.reflect.Method.invoke(Unknown Source)
+	at org.eclipse.equinox.launcher.Main.invokeFramework(Main.java:648)
+	at org.eclipse.equinox.launcher.Main.basicRun(Main.java:603)
+	at org.eclipse.equinox.launcher.Main.run(Main.java:1465)
+	at org.eclipse.equinox.launcher.Main.main(Main.java:1438)
+!SUBENTRY 2 org.eclipse.core.resources 4 567 2015-07-01 14:35:18.963
+!MESSAGE The project description file (.project) for 'MyAnt_2.1' is missing.  This file contains important information about the project.  The project will not function properly until this file is restored.
+
+!ENTRY org.eclipse.emf.ecore 2 0 2015-07-01 14:35:19.148
+!MESSAGE Both 'it.unibo.xtext.robot.ui' and 'it.unibo.xtext.highRobot.spec.ui' register an extension parser for 'ddr'
+
+!ENTRY org.eclipse.e4.ui.workbench 4 0 2015-07-01 14:35:28.966
+!MESSAGE Error setting focus to : org.eclipse.e4.ui.model.application.ui.basic.impl.PartImpl AntGUI.java
+!STACK 0
+org.eclipse.swt.SWTException: Widget is disposed
+	at org.eclipse.swt.SWT.error(SWT.java:4441)
+	at org.eclipse.swt.SWT.error(SWT.java:4356)
+	at org.eclipse.swt.SWT.error(SWT.java:4327)
+	at org.eclipse.swt.widgets.Widget.error(Widget.java:476)
+	at org.eclipse.swt.widgets.Widget.checkWidget(Widget.java:348)
+	at org.eclipse.swt.widgets.Control.setFocus(Control.java:3320)
+	at org.eclipse.swt.widgets.Composite.setFocus(Composite.java:1039)
+	at org.eclipse.swt.widgets.Composite.setFocus(Composite.java:1039)
+	at org.eclipse.ui.texteditor.StatusTextEditor.setFocus(StatusTextEditor.java:120)
+	at org.eclipse.jdt.internal.ui.javaeditor.JavaEditor.setFocus(JavaEditor.java:2389)
+	at org.eclipse.ui.internal.e4.compatibility.CompatibilityPart.delegateSetFocus(CompatibilityPart.java:191)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(Unknown Source)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(Unknown Source)
+	at java.lang.reflect.Method.invoke(Unknown Source)
+	at org.eclipse.e4.core.internal.di.MethodRequestor.execute(MethodRequestor.java:55)
+	at org.eclipse.e4.core.internal.di.InjectorImpl.invokeUsingClass(InjectorImpl.java:247)
+	at org.eclipse.e4.core.internal.di.InjectorImpl.invokeUsingClass(InjectorImpl.java:253)
+	at org.eclipse.e4.core.internal.di.InjectorImpl.invoke(InjectorImpl.java:225)
+	at org.eclipse.e4.core.contexts.ContextInjectionFactory.invoke(ContextInjectionFactory.java:107)
+	at org.eclipse.e4.ui.internal.workbench.swt.PartRenderingEngine.focusGui(PartRenderingEngine.java:795)
+	at org.eclipse.e4.ui.workbench.renderers.swt.ContributedPartRenderer$2.setFocus(ContributedPartRenderer.java:100)
+	at org.eclipse.swt.custom.CTabItem.setFocus(CTabItem.java:332)
+	at org.eclipse.swt.custom.CTabFolder.setFocus(CTabFolder.java:2555)
+	at org.eclipse.swt.widgets.Control.fixFocus(Control.java:1052)
+	at org.eclipse.swt.widgets.Control.setVisible(Control.java:3818)
+	at org.eclipse.swt.custom.CTabFolder.setSelection(CTabFolder.java:3098)
+	at org.eclipse.swt.custom.CTabFolder.setSelection(CTabFolder.java:3106)
+	at org.eclipse.swt.custom.CTabFolder.onMouse(CTabFolder.java:1794)
+	at org.eclipse.swt.custom.CTabFolder$1.handleEvent(CTabFolder.java:283)
+	at org.eclipse.swt.widgets.EventTable.sendEvent(EventTable.java:84)
+	at org.eclipse.swt.widgets.Display.sendEvent(Display.java:4353)
+	at org.eclipse.swt.widgets.Widget.sendEvent(Widget.java:1061)
+	at org.eclipse.swt.widgets.Display.runDeferredEvents(Display.java:4172)
+	at org.eclipse.swt.widgets.Display.readAndDispatch(Display.java:3761)
+	at org.eclipse.e4.ui.internal.workbench.swt.PartRenderingEngine$9.run(PartRenderingEngine.java:1151)
+	at org.eclipse.core.databinding.observable.Realm.runWithDefault(Realm.java:332)
+	at org.eclipse.e4.ui.internal.workbench.swt.PartRenderingEngine.run(PartRenderingEngine.java:1032)
+	at org.eclipse.e4.ui.internal.workbench.E4Workbench.createAndRunUI(E4Workbench.java:148)
+	at org.eclipse.ui.internal.Workbench$5.run(Workbench.java:636)
+	at org.eclipse.core.databinding.observable.Realm.runWithDefault(Realm.java:332)
+	at org.eclipse.ui.internal.Workbench.createAndRunWorkbench(Workbench.java:579)
+	at org.eclipse.ui.PlatformUI.createAndRunWorkbench(PlatformUI.java:150)
+	at org.eclipse.ui.internal.ide.application.IDEApplication.start(IDEApplication.java:135)
+	at org.eclipse.equinox.internal.app.EclipseAppHandle.run(EclipseAppHandle.java:196)
+	at org.eclipse.core.runtime.internal.adaptor.EclipseAppLauncher.runApplication(EclipseAppLauncher.java:134)
+	at org.eclipse.core.runtime.internal.adaptor.EclipseAppLauncher.start(EclipseAppLauncher.java:104)
+	at org.eclipse.core.runtime.adaptor.EclipseStarter.run(EclipseStarter.java:380)
+	at org.eclipse.core.runtime.adaptor.EclipseStarter.run(EclipseStarter.java:235)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(Unknown Source)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(Unknown Source)
+	at java.lang.reflect.Method.invoke(Unknown Source)
+	at org.eclipse.equinox.launcher.Main.invokeFramework(Main.java:648)
+	at org.eclipse.equinox.launcher.Main.basicRun(Main.java:603)
+	at org.eclipse.equinox.launcher.Main.run(Main.java:1465)
+	at org.eclipse.equinox.launcher.Main.main(Main.java:1438)
+
+!ENTRY org.eclipse.egit.ui 2 0 2015-07-01 14:35:30.420
+!MESSAGE Warning: EGit couldn't detect the installation path "gitPrefix" of native Git. Hence EGit can't respect system level
+Git settings which might be configured in ${gitPrefix}/etc/gitconfig under the native Git installation directory.
+The most important of these settings is core.autocrlf. Git for Windows by default sets this parameter to true in
+this system level configuration. The Git installation location can be configured on the
+Team > Git > Configuration preference page's 'System Settings' tab.
+This warning can be switched off on the Team > Git > Confirmations and Warnings preference page.
+
+!ENTRY org.eclipse.egit.ui 2 0 2015-07-01 14:35:30.420
+!MESSAGE Warning: The environment variable HOME is not set. The following directory will be used to store the Git
+user global configuration and to define the default location to store repositories: 'C:\Users\MarMat89'. If this is
+not correct please set the HOME environment variable and restart Eclipse. Otherwise Git for Windows and
+EGit might behave differently since they see different configuration options.
+This warning can be switched off on the Team > Git > Confirmations and Warnings preference page.
+
+!ENTRY org.apache.log4j 2 0 2015-07-01 14:35:54.494
+!MESSAGE org.eclipse.xtext.internal.ExtensionResourceServiceProviderRegistryReader  - Both 'it.unibo.xtext.robot.ui' and 'it.unibo.xtext.highRobot.spec.ui' register a content parser for 'ddr'
+
+
+!ENTRY org.eclipse.e4.ui.workbench 4 0 2015-07-01 16:37:00.084
+!MESSAGE Error disposing widget for : org.eclipse.e4.ui.model.application.ui.menu.impl.MenuImpl null
+!STACK 0
+org.eclipse.swt.SWTException: Graphic is disposed
+	at org.eclipse.swt.SWT.error(SWT.java:4441)
+	at org.eclipse.swt.SWT.error(SWT.java:4356)
+	at org.eclipse.swt.SWT.error(SWT.java:4327)
+	at org.eclipse.swt.graphics.Font.getFontData(Font.java:184)
+	at org.eclipse.swt.custom.CTabFolderRenderer.drawChevron(CTabFolderRenderer.java:910)
+	at org.eclipse.swt.custom.CTabFolderRenderer.draw(CTabFolderRenderer.java:606)
+	at org.eclipse.e4.ui.workbench.renderers.swt.CTabRendering.draw(CTabRendering.java:244)
+	at org.eclipse.swt.custom.CTabFolder.createButtonImage(CTabFolder.java:668)
+	at org.eclipse.swt.custom.CTabFolder.setButtonBounds(CTabFolder.java:2485)
+	at org.eclipse.swt.custom.CTabFolder.updateItems(CTabFolder.java:3705)
+	at org.eclipse.swt.custom.CTabFolder.updateItems(CTabFolder.java:3640)
+	at org.eclipse.swt.custom.CTabFolder.onResize(CTabFolder.java:2034)
+	at org.eclipse.swt.custom.CTabFolder$1.handleEvent(CTabFolder.java:290)
+	at org.eclipse.swt.widgets.EventTable.sendEvent(EventTable.java:84)
+	at org.eclipse.swt.widgets.Display.sendEvent(Display.java:4353)
+	at org.eclipse.swt.widgets.Widget.sendEvent(Widget.java:1061)
+	at org.eclipse.swt.widgets.Widget.sendEvent(Widget.java:1085)
+	at org.eclipse.swt.widgets.Widget.sendEvent(Widget.java:1066)
+	at org.eclipse.swt.widgets.Control.sendResize(Control.java:2950)
+	at org.eclipse.swt.widgets.Composite.sendResize(Composite.java:977)
+	at org.eclipse.swt.widgets.Composite.setBounds(Composite.java:1026)
+	at org.eclipse.swt.widgets.Control.setBounds(Control.java:3104)
+	at org.eclipse.swt.widgets.Control.setBounds(Control.java:3100)
+	at org.eclipse.swt.layout.FillLayout.layout(FillLayout.java:204)
+	at org.eclipse.swt.widgets.Composite.updateLayout(Composite.java:1290)
+	at org.eclipse.swt.widgets.Composite.sendResize(Composite.java:981)
+	at org.eclipse.swt.widgets.Composite.setBounds(Composite.java:1026)
+	at org.eclipse.swt.widgets.Control.setBounds(Control.java:3104)
+	at org.eclipse.swt.widgets.Control.setBounds(Control.java:3100)
+	at org.eclipse.swt.layout.FillLayout.layout(FillLayout.java:204)
+	at org.eclipse.swt.widgets.Composite.updateLayout(Composite.java:1290)
+	at org.eclipse.swt.widgets.Composite.sendResize(Composite.java:981)
+	at org.eclipse.swt.widgets.Composite.setBounds(Composite.java:1026)
+	at org.eclipse.swt.widgets.Control.setBounds(Control.java:3104)
+	at org.eclipse.swt.widgets.Control.setBounds(Control.java:3100)
+	at org.eclipse.swt.widgets.Control.setBounds(Control.java:3167)
+	at org.eclipse.e4.ui.workbench.renderers.swt.SashLayout.setRectangle(SashLayout.java:318)
+	at org.eclipse.e4.ui.workbench.renderers.swt.SashLayout.tileSubNodes(SashLayout.java:263)
+	at org.eclipse.e4.ui.workbench.renderers.swt.SashLayout.tileSubNodes(SashLayout.java:306)
+	at org.eclipse.e4.ui.workbench.renderers.swt.SashLayout.tileSubNodes(SashLayout.java:306)
+	at org.eclipse.e4.ui.workbench.renderers.swt.SashLayout.tileSubNodes(SashLayout.java:306)
+	at org.eclipse.e4.ui.workbench.renderers.swt.SashLayout.layout(SashLayout.java:180)
+	at org.eclipse.swt.widgets.Composite.updateLayout(Composite.java:1290)
+	at org.eclipse.swt.widgets.Composite.sendResize(Composite.java:981)
+	at org.eclipse.swt.widgets.Composite.setBounds(Composite.java:1026)
+	at org.eclipse.swt.widgets.Control.setBounds(Control.java:3104)
+	at org.eclipse.swt.widgets.Control.setBounds(Control.java:3100)
+	at org.eclipse.swt.layout.FillLayout.layout(FillLayout.java:204)
+	at org.eclipse.swt.widgets.Composite.updateLayout(Composite.java:1290)
+	at org.eclipse.swt.widgets.Composite.WM_SIZE(Composite.java:1701)
+	at org.eclipse.swt.widgets.Control.windowProc(Control.java:4685)
+	at org.eclipse.swt.widgets.Display.windowProc(Display.java:5023)
+	at org.eclipse.swt.internal.win32.OS.DefWindowProcW(Native Method)
+	at org.eclipse.swt.internal.win32.OS.DefWindowProc(OS.java:2544)
+	at org.eclipse.swt.widgets.Scrollable.callWindowProc(Scrollable.java:79)
+	at org.eclipse.swt.widgets.Control.WM_WINDOWPOSCHANGED(Control.java:5492)
+	at org.eclipse.swt.widgets.Control.windowProc(Control.java:4698)
+	at org.eclipse.swt.widgets.Display.windowProc(Display.java:5023)
+	at org.eclipse.swt.internal.win32.OS.SetWindowPos(Native Method)
+	at org.eclipse.swt.widgets.Widget.SetWindowPos(Widget.java:1465)
+	at org.eclipse.swt.widgets.Control.setBounds(Control.java:3143)
+	at org.eclipse.swt.widgets.Composite.setBounds(Composite.java:1020)
+	at org.eclipse.swt.widgets.Control.setBounds(Control.java:3104)
+	at org.eclipse.swt.widgets.Control.setBounds(Control.java:3100)
+	at org.eclipse.swt.widgets.Control.setBounds(Control.java:3167)
+	at org.eclipse.swt.custom.StackLayout.layout(StackLayout.java:123)
+	at org.eclipse.swt.widgets.Composite.updateLayout(Composite.java:1290)
+	at org.eclipse.swt.widgets.Composite.WM_SIZE(Composite.java:1701)
+	at org.eclipse.swt.widgets.Control.windowProc(Control.java:4685)
+	at org.eclipse.swt.widgets.Display.windowProc(Display.java:5023)
+	at org.eclipse.swt.internal.win32.OS.DefWindowProcW(Native Method)
+	at org.eclipse.swt.internal.win32.OS.DefWindowProc(OS.java:2544)
+	at org.eclipse.swt.widgets.Scrollable.callWindowProc(Scrollable.java:79)
+	at org.eclipse.swt.widgets.Control.WM_WINDOWPOSCHANGED(Control.java:5492)
+	at org.eclipse.swt.widgets.Control.windowProc(Control.java:4698)
+	at org.eclipse.swt.widgets.Display.windowProc(Display.java:5023)
+	at org.eclipse.swt.internal.win32.OS.SetWindowPos(Native Method)
+	at org.eclipse.swt.widgets.Widget.SetWindowPos(Widget.java:1465)
+	at org.eclipse.swt.widgets.Control.setBounds(Control.java:3143)
+	at org.eclipse.swt.widgets.Composite.setBounds(Composite.java:1020)
+	at org.eclipse.swt.widgets.Control.setBounds(Control.java:3104)
+	at org.eclipse.swt.widgets.Control.setBounds(Control.java:3100)
+	at org.eclipse.swt.widgets.Control.setBounds(Control.java:3167)
+	at org.eclipse.e4.ui.workbench.renderers.swt.SashLayout.setRectangle(SashLayout.java:318)
+	at org.eclipse.e4.ui.workbench.renderers.swt.SashLayout.tileSubNodes(SashLayout.java:263)
+	at org.eclipse.e4.ui.workbench.renderers.swt.SashLayout.tileSubNodes(SashLayout.java:306)
+	at org.eclipse.e4.ui.workbench.renderers.swt.SashLayout.layout(SashLayout.java:180)
+	at org.eclipse.swt.widgets.Composite.updateLayout(Composite.java:1290)
+	at org.eclipse.swt.widgets.Composite.WM_SIZE(Composite.java:1701)
+	at org.eclipse.swt.widgets.Control.windowProc(Control.java:4685)
+	at org.eclipse.swt.widgets.Display.windowProc(Display.java:5023)
+	at org.eclipse.swt.internal.win32.OS.DefWindowProcW(Native Method)
+	at org.eclipse.swt.internal.win32.OS.DefWindowProc(OS.java:2544)
+	at org.eclipse.swt.widgets.Scrollable.callWindowProc(Scrollable.java:79)
+	at org.eclipse.swt.widgets.Control.WM_WINDOWPOSCHANGED(Control.java:5492)
+	at org.eclipse.swt.widgets.Control.windowProc(Control.java:4698)
+	at org.eclipse.swt.widgets.Display.windowProc(Display.java:5023)
+	at org.eclipse.swt.internal.win32.OS.SetWindowPos(Native Method)
+	at org.eclipse.swt.widgets.Widget.SetWindowPos(Widget.java:1465)
+	at org.eclipse.swt.widgets.Control.setBounds(Control.java:3143)
+	at org.eclipse.swt.widgets.Composite.setBounds(Composite.java:1020)
+	at org.eclipse.swt.widgets.Control.setBounds(Control.java:3104)
+	at org.eclipse.swt.widgets.Control.setBounds(Control.java:3100)
+	at org.eclipse.swt.layout.FillLayout.layout(FillLayout.java:204)
+	at org.eclipse.swt.widgets.Composite.updateLayout(Composite.java:1290)
+	at org.eclipse.swt.widgets.Composite.WM_SIZE(Composite.java:1701)
+	at org.eclipse.swt.widgets.Control.windowProc(Control.java:4685)
+	at org.eclipse.swt.widgets.Display.windowProc(Display.java:5023)
+	at org.eclipse.swt.internal.win32.OS.DefWindowProcW(Native Method)
+	at org.eclipse.swt.internal.win32.OS.DefWindowProc(OS.java:2544)
+	at org.eclipse.swt.widgets.Scrollable.callWindowProc(Scrollable.java:79)
+	at org.eclipse.swt.widgets.Control.WM_WINDOWPOSCHANGED(Control.java:5492)
+	at org.eclipse.swt.widgets.Control.windowProc(Control.java:4698)
+	at org.eclipse.swt.widgets.Display.windowProc(Display.java:5036)
+	at org.eclipse.swt.internal.win32.OS.EndDeferWindowPos(Native Method)
+	at org.eclipse.swt.widgets.Composite.resizeChildren(Composite.java:950)
+	at org.eclipse.swt.widgets.Composite.resizeChildren(Composite.java:916)
+	at org.eclipse.swt.widgets.Composite.setResizeChildren(Composite.java:1127)
+	at org.eclipse.swt.widgets.Composite.WM_SIZE(Composite.java:1705)
+	at org.eclipse.swt.widgets.Canvas.WM_SIZE(Canvas.java:462)
+	at org.eclipse.swt.widgets.Decorations.WM_SIZE(Decorations.java:1810)
+	at org.eclipse.swt.widgets.Control.windowProc(Control.java:4685)
+	at org.eclipse.swt.widgets.Canvas.windowProc(Canvas.java:339)
+	at org.eclipse.swt.widgets.Decorations.windowProc(Decorations.java:1626)
+	at org.eclipse.swt.widgets.Shell.windowProc(Shell.java:2075)
+	at org.eclipse.swt.widgets.Display.windowProc(Display.java:5036)
+	at org.eclipse.swt.internal.win32.OS.DefWindowProcW(Native Method)
+	at org.eclipse.swt.internal.win32.OS.DefWindowProc(OS.java:2544)
+	at org.eclipse.swt.widgets.Shell.callWindowProc(Shell.java:498)
+	at org.eclipse.swt.widgets.Control.WM_WINDOWPOSCHANGED(Control.java:5492)
+	at org.eclipse.swt.widgets.Canvas.WM_WINDOWPOSCHANGED(Canvas.java:468)
+	at org.eclipse.swt.widgets.Control.windowProc(Control.java:4698)
+	at org.eclipse.swt.widgets.Canvas.windowProc(Canvas.java:339)
+	at org.eclipse.swt.widgets.Decorations.windowProc(Decorations.java:1626)
+	at org.eclipse.swt.widgets.Shell.windowProc(Shell.java:2075)
+	at org.eclipse.swt.widgets.Display.windowProc(Display.java:5023)
+	at org.eclipse.swt.internal.win32.OS.SetMenu(Native Method)
+	at org.eclipse.swt.widgets.Decorations.setMenuBar(Decorations.java:1174)
+	at org.eclipse.swt.widgets.Menu.releaseParent(Menu.java:1186)
+	at org.eclipse.swt.widgets.Widget.release(Widget.java:824)
+	at org.eclipse.swt.widgets.Widget.dispose(Widget.java:454)
+	at org.eclipse.e4.ui.workbench.renderers.swt.SWTPartRenderer.disposeWidget(SWTPartRenderer.java:175)
+	at org.eclipse.e4.ui.internal.workbench.swt.PartRenderingEngine.safeRemoveGui(PartRenderingEngine.java:933)
+	at org.eclipse.e4.ui.internal.workbench.swt.PartRenderingEngine.access$3(PartRenderingEngine.java:862)
+	at org.eclipse.e4.ui.internal.workbench.swt.PartRenderingEngine$8.run(PartRenderingEngine.java:857)
+	at org.eclipse.core.runtime.SafeRunner.run(SafeRunner.java:42)
+	at org.eclipse.e4.ui.internal.workbench.swt.PartRenderingEngine.removeGui(PartRenderingEngine.java:841)
+	at org.eclipse.ui.internal.WorkbenchWindow$1.handleEvent(WorkbenchWindow.java:319)
+	at org.eclipse.e4.ui.services.internal.events.UIEventHandler$1.run(UIEventHandler.java:40)
+	at org.eclipse.swt.widgets.Synchronizer.syncExec(Synchronizer.java:187)
+	at org.eclipse.ui.internal.UISynchronizer.syncExec(UISynchronizer.java:156)
+	at org.eclipse.swt.widgets.Display.syncExec(Display.java:4734)
+	at org.eclipse.e4.ui.internal.workbench.swt.E4Application$1.syncExec(E4Application.java:218)
+	at org.eclipse.e4.ui.services.internal.events.UIEventHandler.handleEvent(UIEventHandler.java:36)
+	at org.eclipse.equinox.internal.event.EventHandlerWrapper.handleEvent(EventHandlerWrapper.java:197)
+	at org.eclipse.equinox.internal.event.EventHandlerTracker.dispatchEvent(EventHandlerTracker.java:197)
+	at org.eclipse.equinox.internal.event.EventHandlerTracker.dispatchEvent(EventHandlerTracker.java:1)
+	at org.eclipse.osgi.framework.eventmgr.EventManager.dispatchEvent(EventManager.java:230)
+	at org.eclipse.osgi.framework.eventmgr.ListenerQueue.dispatchEventSynchronous(ListenerQueue.java:148)
+	at org.eclipse.equinox.internal.event.EventAdminImpl.dispatchEvent(EventAdminImpl.java:135)
+	at org.eclipse.equinox.internal.event.EventAdminImpl.sendEvent(EventAdminImpl.java:78)
+	at org.eclipse.equinox.internal.event.EventComponent.sendEvent(EventComponent.java:39)
+	at org.eclipse.e4.ui.services.internal.events.EventBroker.send(EventBroker.java:81)
+	at org.eclipse.e4.ui.internal.workbench.UIEventPublisher.notifyChanged(UIEventPublisher.java:59)
+	at org.eclipse.emf.common.notify.impl.BasicNotifierImpl.eNotify(BasicNotifierImpl.java:374)
+	at org.eclipse.e4.ui.model.application.ui.impl.UIElementImpl.setWidget(UIElementImpl.java:261)
+	at org.eclipse.e4.ui.workbench.renderers.swt.SWTPartRenderer.unbindWidget(SWTPartRenderer.java:150)
+	at org.eclipse.e4.ui.workbench.renderers.swt.SWTPartRenderer$1.widgetDisposed(SWTPartRenderer.java:138)
+	at org.eclipse.swt.widgets.TypedListener.handleEvent(TypedListener.java:123)
+	at org.eclipse.swt.widgets.EventTable.sendEvent(EventTable.java:84)
+	at org.eclipse.swt.widgets.Display.sendEvent(Display.java:4353)
+	at org.eclipse.swt.widgets.Widget.sendEvent(Widget.java:1061)
+	at org.eclipse.swt.widgets.Widget.sendEvent(Widget.java:1085)
+	at org.eclipse.swt.widgets.Widget.sendEvent(Widget.java:1066)
+	at org.eclipse.swt.widgets.Widget.release(Widget.java:816)
+	at org.eclipse.swt.widgets.Widget.dispose(Widget.java:454)
+	at org.eclipse.swt.widgets.Decorations.dispose(Decorations.java:447)
+	at org.eclipse.swt.widgets.Shell.dispose(Shell.java:715)
+	at org.eclipse.swt.widgets.Display.release(Display.java:3811)
+	at org.eclipse.swt.graphics.Device.dispose(Device.java:295)
+	at org.eclipse.swt.widgets.Display.messageProc(Display.java:3292)
+	at org.eclipse.swt.internal.win32.OS.DefWindowProcW(Native Method)
+	at org.eclipse.swt.internal.win32.OS.DefWindowProc(OS.java:2544)
+	at org.eclipse.swt.widgets.Shell.callWindowProc(Shell.java:498)
+	at org.eclipse.swt.widgets.Control.windowProc(Control.java:4705)
+	at org.eclipse.swt.widgets.Canvas.windowProc(Canvas.java:339)
+	at org.eclipse.swt.widgets.Decorations.windowProc(Decorations.java:1626)
+	at org.eclipse.swt.widgets.Shell.windowProc(Shell.java:2075)
+	at org.eclipse.swt.widgets.Display.windowProc(Display.java:5036)
+	at org.eclipse.swt.internal.win32.OS.PeekMessageW(Native Method)
+	at org.eclipse.swt.internal.win32.OS.PeekMessage(OS.java:3141)
+	at org.eclipse.swt.widgets.Display.readAndDispatch(Display.java:3756)
+	at org.eclipse.jface.window.Window.runEventLoop(Window.java:832)
+	at org.eclipse.jface.window.Window.open(Window.java:808)
+	at org.eclipse.jface.dialogs.MessageDialog.open(MessageDialog.java:341)
+	at org.eclipse.jface.dialogs.MessageDialogWithToggle.open(MessageDialogWithToggle.java:114)
+	at org.eclipse.jface.dialogs.MessageDialogWithToggle.openOkCancelConfirm(MessageDialogWithToggle.java:209)
+	at org.eclipse.ui.internal.ide.application.IDEWorkbenchWindowAdvisor.promptOnExit(IDEWorkbenchWindowAdvisor.java:218)
+	at org.eclipse.ui.internal.ide.application.IDEWorkbenchAdvisor$2.handleEvent(IDEWorkbenchAdvisor.java:171)
+	at org.eclipse.swt.widgets.EventTable.sendEvent(EventTable.java:84)
+	at org.eclipse.swt.widgets.Display.sendEvent(Display.java:4353)
+	at org.eclipse.swt.widgets.Display.sendEvent(Display.java:4346)
+	at org.eclipse.swt.widgets.Display.messageProc(Display.java:3305)
+	at org.eclipse.swt.internal.win32.OS.DefWindowProcW(Native Method)
+	at org.eclipse.swt.internal.win32.OS.DefWindowProc(OS.java:2544)
+	at org.eclipse.swt.widgets.Shell.callWindowProc(Shell.java:498)
+	at org.eclipse.swt.widgets.Control.windowProc(Control.java:4705)
+	at org.eclipse.swt.widgets.Canvas.windowProc(Canvas.java:339)
+	at org.eclipse.swt.widgets.Decorations.windowProc(Decorations.java:1626)
+	at org.eclipse.swt.widgets.Shell.windowProc(Shell.java:2075)
+	at org.eclipse.swt.widgets.Display.windowProc(Display.java:5036)
+	at org.eclipse.swt.internal.win32.OS.PeekMessageW(Native Method)
+	at org.eclipse.swt.internal.win32.OS.PeekMessage(OS.java:3141)
+	at org.eclipse.swt.widgets.Display.readAndDispatch(Display.java:3756)
+	at org.eclipse.e4.ui.internal.workbench.swt.PartRenderingEngine$9.run(PartRenderingEngine.java:1151)
+	at org.eclipse.core.databinding.observable.Realm.runWithDefault(Realm.java:332)
+	at org.eclipse.e4.ui.internal.workbench.swt.PartRenderingEngine.run(PartRenderingEngine.java:1032)
+	at org.eclipse.e4.ui.internal.workbench.E4Workbench.createAndRunUI(E4Workbench.java:148)
+	at org.eclipse.ui.internal.Workbench$5.run(Workbench.java:636)
+	at org.eclipse.core.databinding.observable.Realm.runWithDefault(Realm.java:332)
+	at org.eclipse.ui.internal.Workbench.createAndRunWorkbench(Workbench.java:579)
+	at org.eclipse.ui.PlatformUI.createAndRunWorkbench(PlatformUI.java:150)
+	at org.eclipse.ui.internal.ide.application.IDEApplication.start(IDEApplication.java:135)
+	at org.eclipse.equinox.internal.app.EclipseAppHandle.run(EclipseAppHandle.java:196)
+	at org.eclipse.core.runtime.internal.adaptor.EclipseAppLauncher.runApplication(EclipseAppLauncher.java:134)
+	at org.eclipse.core.runtime.internal.adaptor.EclipseAppLauncher.start(EclipseAppLauncher.java:104)
+	at org.eclipse.core.runtime.adaptor.EclipseStarter.run(EclipseStarter.java:380)
+	at org.eclipse.core.runtime.adaptor.EclipseStarter.run(EclipseStarter.java:235)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(Unknown Source)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(Unknown Source)
+	at java.lang.reflect.Method.invoke(Unknown Source)
+	at org.eclipse.equinox.launcher.Main.invokeFramework(Main.java:648)
+	at org.eclipse.equinox.launcher.Main.basicRun(Main.java:603)
+	at org.eclipse.equinox.launcher.Main.run(Main.java:1465)
+	at org.eclipse.equinox.launcher.Main.main(Main.java:1438)
+
+!ENTRY org.eclipse.equinox.event 4 0 2015-07-01 16:37:00.106
+!MESSAGE Exception while dispatching event org.osgi.service.event.Event [topic=org/eclipse/e4/ui/model/ui/UIElement/widget/SET] to handler org.eclipse.e4.ui.services.internal.events.UIEventHandler@314c6df7
+!STACK 0
+java.lang.NullPointerException
+	at org.eclipse.ui.internal.NavigationHistory.getDisplay(NavigationHistory.java:176)
+	at org.eclipse.ui.internal.NavigationHistory.markEditor(NavigationHistory.java:193)
+	at org.eclipse.ui.internal.WorkbenchPage.updateActiveEditorSources(WorkbenchPage.java:407)
+	at org.eclipse.ui.internal.WorkbenchPage.firePartClosed(WorkbenchPage.java:4995)
+	at org.eclipse.ui.internal.e4.compatibility.CompatibilityPart$1.handleEvent(CompatibilityPart.java:98)
+	at org.eclipse.e4.ui.services.internal.events.UIEventHandler$1.run(UIEventHandler.java:40)
+	at org.eclipse.swt.widgets.Synchronizer.syncExec(Synchronizer.java:187)
+	at org.eclipse.ui.internal.UISynchronizer.syncExec(UISynchronizer.java:156)
+	at org.eclipse.swt.widgets.Display.syncExec(Display.java:4734)
+	at org.eclipse.e4.ui.internal.workbench.swt.E4Application$1.syncExec(E4Application.java:218)
+	at org.eclipse.e4.ui.services.internal.events.UIEventHandler.handleEvent(UIEventHandler.java:36)
+	at org.eclipse.equinox.internal.event.EventHandlerWrapper.handleEvent(EventHandlerWrapper.java:197)
+	at org.eclipse.equinox.internal.event.EventHandlerTracker.dispatchEvent(EventHandlerTracker.java:197)
+	at org.eclipse.equinox.internal.event.EventHandlerTracker.dispatchEvent(EventHandlerTracker.java:1)
+	at org.eclipse.osgi.framework.eventmgr.EventManager.dispatchEvent(EventManager.java:230)
+	at org.eclipse.osgi.framework.eventmgr.ListenerQueue.dispatchEventSynchronous(ListenerQueue.java:148)
+	at org.eclipse.equinox.internal.event.EventAdminImpl.dispatchEvent(EventAdminImpl.java:135)
+	at org.eclipse.equinox.internal.event.EventAdminImpl.sendEvent(EventAdminImpl.java:78)
+	at org.eclipse.equinox.internal.event.EventComponent.sendEvent(EventComponent.java:39)
+	at org.eclipse.e4.ui.services.internal.events.EventBroker.send(EventBroker.java:81)
+	at org.eclipse.e4.ui.internal.workbench.UIEventPublisher.notifyChanged(UIEventPublisher.java:59)
+	at org.eclipse.emf.common.notify.impl.BasicNotifierImpl.eNotify(BasicNotifierImpl.java:374)
+	at org.eclipse.e4.ui.model.application.ui.impl.UIElementImpl.setWidget(UIElementImpl.java:261)
+	at org.eclipse.e4.ui.workbench.renderers.swt.SWTPartRenderer.unbindWidget(SWTPartRenderer.java:150)
+	at org.eclipse.e4.ui.workbench.renderers.swt.SWTPartRenderer$1.widgetDisposed(SWTPartRenderer.java:138)
+	at org.eclipse.swt.widgets.TypedListener.handleEvent(TypedListener.java:123)
+	at org.eclipse.swt.widgets.EventTable.sendEvent(EventTable.java:84)
+	at org.eclipse.swt.widgets.Display.sendEvent(Display.java:4353)
+	at org.eclipse.swt.widgets.Widget.sendEvent(Widget.java:1061)
+	at org.eclipse.swt.widgets.Widget.sendEvent(Widget.java:1085)
+	at org.eclipse.swt.widgets.Widget.sendEvent(Widget.java:1066)
+	at org.eclipse.swt.widgets.Widget.release(Widget.java:816)
+	at org.eclipse.swt.widgets.Composite.releaseChildren(Composite.java:874)
+	at org.eclipse.swt.widgets.Widget.release(Widget.java:819)
+	at org.eclipse.swt.widgets.Composite.releaseChildren(Composite.java:874)
+	at org.eclipse.swt.widgets.Widget.release(Widget.java:819)
+	at org.eclipse.swt.widgets.Composite.releaseChildren(Composite.java:874)
+	at org.eclipse.swt.widgets.Widget.release(Widget.java:819)
+	at org.eclipse.swt.widgets.Composite.releaseChildren(Composite.java:874)
+	at org.eclipse.swt.widgets.Widget.release(Widget.java:819)
+	at org.eclipse.swt.widgets.Composite.releaseChildren(Composite.java:874)
+	at org.eclipse.swt.widgets.Widget.release(Widget.java:819)
+	at org.eclipse.swt.widgets.Composite.releaseChildren(Composite.java:874)
+	at org.eclipse.swt.widgets.Widget.release(Widget.java:819)
+	at org.eclipse.swt.widgets.Composite.releaseChildren(Composite.java:874)
+	at org.eclipse.swt.widgets.Widget.release(Widget.java:819)
+	at org.eclipse.swt.widgets.Composite.releaseChildren(Composite.java:874)
+	at org.eclipse.swt.widgets.Widget.release(Widget.java:819)
+	at org.eclipse.swt.widgets.Composite.releaseChildren(Composite.java:874)
+	at org.eclipse.swt.widgets.Canvas.releaseChildren(Canvas.java:165)
+	at org.eclipse.swt.widgets.Decorations.releaseChildren(Decorations.java:789)
+	at org.eclipse.swt.widgets.Shell.releaseChildren(Shell.java:1290)
+	at org.eclipse.swt.widgets.Widget.release(Widget.java:819)
+	at org.eclipse.swt.widgets.Widget.dispose(Widget.java:454)
+	at org.eclipse.swt.widgets.Decorations.dispose(Decorations.java:447)
+	at org.eclipse.swt.widgets.Shell.dispose(Shell.java:715)
+	at org.eclipse.swt.widgets.Display.release(Display.java:3811)
+	at org.eclipse.swt.graphics.Device.dispose(Device.java:295)
+	at org.eclipse.swt.widgets.Display.messageProc(Display.java:3292)
+	at org.eclipse.swt.internal.win32.OS.DefWindowProcW(Native Method)
+	at org.eclipse.swt.internal.win32.OS.DefWindowProc(OS.java:2544)
+	at org.eclipse.swt.widgets.Shell.callWindowProc(Shell.java:498)
+	at org.eclipse.swt.widgets.Control.windowProc(Control.java:4705)
+	at org.eclipse.swt.widgets.Canvas.windowProc(Canvas.java:339)
+	at org.eclipse.swt.widgets.Decorations.windowProc(Decorations.java:1626)
+	at org.eclipse.swt.widgets.Shell.windowProc(Shell.java:2075)
+	at org.eclipse.swt.widgets.Display.windowProc(Display.java:5036)
+	at org.eclipse.swt.internal.win32.OS.PeekMessageW(Native Method)
+	at org.eclipse.swt.internal.win32.OS.PeekMessage(OS.java:3141)
+	at org.eclipse.swt.widgets.Display.readAndDispatch(Display.java:3756)
+	at org.eclipse.jface.window.Window.runEventLoop(Window.java:832)
+	at org.eclipse.jface.window.Window.open(Window.java:808)
+	at org.eclipse.jface.dialogs.MessageDialog.open(MessageDialog.java:341)
+	at org.eclipse.jface.dialogs.MessageDialogWithToggle.open(MessageDialogWithToggle.java:114)
+	at org.eclipse.jface.dialogs.MessageDialogWithToggle.openOkCancelConfirm(MessageDialogWithToggle.java:209)
+	at org.eclipse.ui.internal.ide.application.IDEWorkbenchWindowAdvisor.promptOnExit(IDEWorkbenchWindowAdvisor.java:218)
+	at org.eclipse.ui.internal.ide.application.IDEWorkbenchAdvisor$2.handleEvent(IDEWorkbenchAdvisor.java:171)
+	at org.eclipse.swt.widgets.EventTable.sendEvent(EventTable.java:84)
+	at org.eclipse.swt.widgets.Display.sendEvent(Display.java:4353)
+	at org.eclipse.swt.widgets.Display.sendEvent(Display.java:4346)
+	at org.eclipse.swt.widgets.Display.messageProc(Display.java:3305)
+	at org.eclipse.swt.internal.win32.OS.DefWindowProcW(Native Method)
+	at org.eclipse.swt.internal.win32.OS.DefWindowProc(OS.java:2544)
+	at org.eclipse.swt.widgets.Shell.callWindowProc(Shell.java:498)
+	at org.eclipse.swt.widgets.Control.windowProc(Control.java:4705)
+	at org.eclipse.swt.widgets.Canvas.windowProc(Canvas.java:339)
+	at org.eclipse.swt.widgets.Decorations.windowProc(Decorations.java:1626)
+	at org.eclipse.swt.widgets.Shell.windowProc(Shell.java:2075)
+	at org.eclipse.swt.widgets.Display.windowProc(Display.java:5036)
+	at org.eclipse.swt.internal.win32.OS.PeekMessageW(Native Method)
+	at org.eclipse.swt.internal.win32.OS.PeekMessage(OS.java:3141)
+	at org.eclipse.swt.widgets.Display.readAndDispatch(Display.java:3756)
+	at org.eclipse.e4.ui.internal.workbench.swt.PartRenderingEngine$9.run(PartRenderingEngine.java:1151)
+	at org.eclipse.core.databinding.observable.Realm.runWithDefault(Realm.java:332)
+	at org.eclipse.e4.ui.internal.workbench.swt.PartRenderingEngine.run(PartRenderingEngine.java:1032)
+	at org.eclipse.e4.ui.internal.workbench.E4Workbench.createAndRunUI(E4Workbench.java:148)
+	at org.eclipse.ui.internal.Workbench$5.run(Workbench.java:636)
+	at org.eclipse.core.databinding.observable.Realm.runWithDefault(Realm.java:332)
+	at org.eclipse.ui.internal.Workbench.createAndRunWorkbench(Workbench.java:579)
+	at org.eclipse.ui.PlatformUI.createAndRunWorkbench(PlatformUI.java:150)
+	at org.eclipse.ui.internal.ide.application.IDEApplication.start(IDEApplication.java:135)
+	at org.eclipse.equinox.internal.app.EclipseAppHandle.run(EclipseAppHandle.java:196)
+	at org.eclipse.core.runtime.internal.adaptor.EclipseAppLauncher.runApplication(EclipseAppLauncher.java:134)
+	at org.eclipse.core.runtime.internal.adaptor.EclipseAppLauncher.start(EclipseAppLauncher.java:104)
+	at org.eclipse.core.runtime.adaptor.EclipseStarter.run(EclipseStarter.java:380)
+	at org.eclipse.core.runtime.adaptor.EclipseStarter.run(EclipseStarter.java:235)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(Unknown Source)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(Unknown Source)
+	at java.lang.reflect.Method.invoke(Unknown Source)
+	at org.eclipse.equinox.launcher.Main.invokeFramework(Main.java:648)
+	at org.eclipse.equinox.launcher.Main.basicRun(Main.java:603)
+	at org.eclipse.equinox.launcher.Main.run(Main.java:1465)
+	at org.eclipse.equinox.launcher.Main.main(Main.java:1438)
+!SESSION 2015-07-01 18:56:10.334 -----------------------------------------------
+eclipse.buildId=4.4.2.M20150204-1700
+java.version=1.8.0_31
+java.vendor=Oracle Corporation
+BootLoader constants: OS=win32, ARCH=x86_64, WS=win32, NL=en_US
+Command-line arguments:  -os win32 -ws win32 -arch x86_64
+
+!ENTRY org.eclipse.core.resources 2 10035 2015-07-01 18:56:26.023
+!MESSAGE The workspace exited with unsaved changes in the previous session; refreshing workspace to recover changes.
+
+!ENTRY org.eclipse.emf.ecore 2 0 2015-07-01 18:56:26.363
+!MESSAGE Both 'it.unibo.xtext.robot.ui' and 'it.unibo.xtext.highRobot.spec.ui' register an extension parser for 'ddr'
+
+!ENTRY org.apache.log4j 2 0 2015-07-01 18:56:27.183
+!MESSAGE org.eclipse.xtext.internal.ExtensionResourceServiceProviderRegistryReader  - Both 'it.unibo.xtext.robot.ui' and 'it.unibo.xtext.highRobot.spec.ui' register a content parser for 'ddr'
+
+
+!ENTRY org.eclipse.egit.ui 2 0 2015-07-01 18:56:37.091
+!MESSAGE Warning: EGit couldn't detect the installation path "gitPrefix" of native Git. Hence EGit can't respect system level
+Git settings which might be configured in ${gitPrefix}/etc/gitconfig under the native Git installation directory.
+The most important of these settings is core.autocrlf. Git for Windows by default sets this parameter to true in
+this system level configuration. The Git installation location can be configured on the
+Team > Git > Configuration preference page's 'System Settings' tab.
+This warning can be switched off on the Team > Git > Confirmations and Warnings preference page.
+
+!ENTRY org.eclipse.egit.ui 2 0 2015-07-01 18:56:37.091
+!MESSAGE Warning: The environment variable HOME is not set. The following directory will be used to store the Git
+user global configuration and to define the default location to store repositories: 'C:\Users\MarMat89'. If this is
+not correct please set the HOME environment variable and restart Eclipse. Otherwise Git for Windows and
+EGit might behave differently since they see different configuration options.
+This warning can be switched off on the Team > Git > Confirmations and Warnings preference page.
+!SESSION 2015-07-07 10:42:40.338 -----------------------------------------------
+eclipse.buildId=4.4.2.M20150204-1700
+java.version=1.8.0_31
+java.vendor=Oracle Corporation
+BootLoader constants: OS=win32, ARCH=x86_64, WS=win32, NL=en_US
+Command-line arguments:  -os win32 -ws win32 -arch x86_64
+
+!ENTRY org.eclipse.emf.ecore 2 0 2015-07-07 10:42:51.172
+!MESSAGE Both 'it.unibo.xtext.robot.ui' and 'it.unibo.xtext.highRobot.spec.ui' register an extension parser for 'ddr'
+
+!ENTRY org.apache.log4j 2 0 2015-07-07 10:42:56.498
+!MESSAGE org.eclipse.xtext.internal.ExtensionResourceServiceProviderRegistryReader  - Both 'it.unibo.xtext.robot.ui' and 'it.unibo.xtext.highRobot.spec.ui' register a content parser for 'ddr'
+
+
+!ENTRY org.eclipse.egit.ui 2 0 2015-07-07 10:43:01.884
+!MESSAGE Warning: EGit couldn't detect the installation path "gitPrefix" of native Git. Hence EGit can't respect system level
+Git settings which might be configured in ${gitPrefix}/etc/gitconfig under the native Git installation directory.
+The most important of these settings is core.autocrlf. Git for Windows by default sets this parameter to true in
+this system level configuration. The Git installation location can be configured on the
+Team > Git > Configuration preference page's 'System Settings' tab.
+This warning can be switched off on the Team > Git > Confirmations and Warnings preference page.
+
+!ENTRY org.eclipse.egit.ui 2 0 2015-07-07 10:43:01.884
+!MESSAGE Warning: The environment variable HOME is not set. The following directory will be used to store the Git
+user global configuration and to define the default location to store repositories: 'C:\Users\MarMat89'. If this is
+not correct please set the HOME environment variable and restart Eclipse. Otherwise Git for Windows and
+EGit might behave differently since they see different configuration options.
+This warning can be switched off on the Team > Git > Confirmations and Warnings preference page.
+!SESSION 2015-08-05 12:45:41.922 -----------------------------------------------
+eclipse.buildId=4.4.2.M20150204-1700
+java.version=1.8.0_31
+java.vendor=Oracle Corporation
+BootLoader constants: OS=win32, ARCH=x86_64, WS=win32, NL=en_US
+Command-line arguments:  -data D:\General Workspace\SCTM2 -os win32 -ws win32 -arch x86_64
+
+!ENTRY org.eclipse.emf.ecore 2 0 2015-08-05 12:45:43.261
+!MESSAGE Both 'it.unibo.xtext.robot.ui' and 'it.unibo.xtext.highRobot.spec.ui' register an extension parser for 'ddr'
+
+!ENTRY org.eclipse.jdt.core 4 0 2015-08-05 12:45:48.188
+!MESSAGE Invalid ZIP archive: D:\General Workspace\SCTM\DustSensor\RXTXcomm-2.2pre2.jar
+
+!ENTRY org.apache.log4j 2 0 2015-08-05 12:45:48.451
+!MESSAGE org.eclipse.xtext.internal.ExtensionResourceServiceProviderRegistryReader  - Both 'it.unibo.xtext.robot.ui' and 'it.unibo.xtext.highRobot.spec.ui' register a content parser for 'ddr'
+
+
+!ENTRY org.eclipse.egit.ui 2 0 2015-08-05 12:45:54.073
+!MESSAGE Warning: EGit couldn't detect the installation path "gitPrefix" of native Git. Hence EGit can't respect system level
+Git settings which might be configured in ${gitPrefix}/etc/gitconfig under the native Git installation directory.
+The most important of these settings is core.autocrlf. Git for Windows by default sets this parameter to true in
+this system level configuration. The Git installation location can be configured on the
+Team > Git > Configuration preference page's 'System Settings' tab.
+This warning can be switched off on the Team > Git > Confirmations and Warnings preference page.
+
+!ENTRY org.eclipse.egit.ui 2 0 2015-08-05 12:45:54.073
+!MESSAGE Warning: The environment variable HOME is not set. The following directory will be used to store the Git
+user global configuration and to define the default location to store repositories: 'C:\Users\MarMat89'. If this is
+not correct please set the HOME environment variable and restart Eclipse. Otherwise Git for Windows and
+EGit might behave differently since they see different configuration options.
+This warning can be switched off on the Team > Git > Confirmations and Warnings preference page.
+!SESSION 2015-08-11 14:07:46.067 -----------------------------------------------
+eclipse.buildId=4.4.2.M20150204-1700
+java.version=1.8.0_31
+java.vendor=Oracle Corporation
+BootLoader constants: OS=win32, ARCH=x86_64, WS=win32, NL=en_US
+Command-line arguments:  -os win32 -ws win32 -arch x86_64
+
+!ENTRY org.eclipse.emf.ecore 2 0 2015-08-11 14:08:00.704
+!MESSAGE Both 'it.unibo.xtext.robot.ui' and 'it.unibo.xtext.highRobot.spec.ui' register an extension parser for 'ddr'
+
+!ENTRY org.apache.log4j 2 0 2015-08-11 14:08:06.602
+!MESSAGE org.eclipse.xtext.internal.ExtensionResourceServiceProviderRegistryReader  - Both 'it.unibo.xtext.robot.ui' and 'it.unibo.xtext.highRobot.spec.ui' register a content parser for 'ddr'
+
+
+!ENTRY org.eclipse.egit.ui 2 0 2015-08-11 14:08:11.735
+!MESSAGE Warning: EGit couldn't detect the installation path "gitPrefix" of native Git. Hence EGit can't respect system level
+Git settings which might be configured in ${gitPrefix}/etc/gitconfig under the native Git installation directory.
+The most important of these settings is core.autocrlf. Git for Windows by default sets this parameter to true in
+this system level configuration. The Git installation location can be configured on the
+Team > Git > Configuration preference page's 'System Settings' tab.
+This warning can be switched off on the Team > Git > Confirmations and Warnings preference page.
+
+!ENTRY org.eclipse.egit.ui 2 0 2015-08-11 14:08:11.736
+!MESSAGE Warning: The environment variable HOME is not set. The following directory will be used to store the Git
+user global configuration and to define the default location to store repositories: 'C:\Users\MarMat89'. If this is
+not correct please set the HOME environment variable and restart Eclipse. Otherwise Git for Windows and
+EGit might behave differently since they see different configuration options.
+This warning can be switched off on the Team > Git > Confirmations and Warnings preference page.
+!SESSION 2015-09-14 22:14:47.140 -----------------------------------------------
+eclipse.buildId=4.4.2.M20150204-1700
+java.version=1.8.0_31
+java.vendor=Oracle Corporation
+BootLoader constants: OS=win32, ARCH=x86_64, WS=win32, NL=en_US
+Command-line arguments:  -os win32 -ws win32 -arch x86_64
+
+!ENTRY org.eclipse.emf.ecore 2 0 2015-09-14 22:15:23.298
+!MESSAGE Both 'it.unibo.xtext.robot.ui' and 'it.unibo.xtext.highRobot.spec.ui' register an extension parser for 'ddr'
+
+!ENTRY org.apache.log4j 2 0 2015-09-14 22:15:28.871
+!MESSAGE org.eclipse.xtext.internal.ExtensionResourceServiceProviderRegistryReader  - Both 'it.unibo.xtext.robot.ui' and 'it.unibo.xtext.highRobot.spec.ui' register a content parser for 'ddr'
+
+
+!ENTRY org.eclipse.egit.ui 2 0 2015-09-14 22:15:33.992
+!MESSAGE Warning: EGit couldn't detect the installation path "gitPrefix" of native Git. Hence EGit can't respect system level
+Git settings which might be configured in ${gitPrefix}/etc/gitconfig under the native Git installation directory.
+The most important of these settings is core.autocrlf. Git for Windows by default sets this parameter to true in
+this system level configuration. The Git installation location can be configured on the
+Team > Git > Configuration preference page's 'System Settings' tab.
+This warning can be switched off on the Team > Git > Confirmations and Warnings preference page.
+
+!ENTRY org.eclipse.egit.ui 2 0 2015-09-14 22:15:33.992
+!MESSAGE Warning: The environment variable HOME is not set. The following directory will be used to store the Git
+user global configuration and to define the default location to store repositories: 'C:\Users\MarMat89'. If this is
+not correct please set the HOME environment variable and restart Eclipse. Otherwise Git for Windows and
+EGit might behave differently since they see different configuration options.
+This warning can be switched off on the Team > Git > Confirmations and Warnings preference page.
+
+!ENTRY org.eclipse.ui 4 4 2015-09-14 22:50:35.902
+!MESSAGE Unable to create part
+
+!ENTRY org.eclipse.core.filebuffers 4 0 2015-09-14 22:50:35.902
+!MESSAGE Cannot determine URI for '/MyAnt_2.1/src/MultiThread/Loader.java'.
+!STACK 1
+org.eclipse.core.runtime.CoreException: Cannot determine URI for '/MyAnt_2.1/src/MultiThread/Loader.java'.
+	at org.eclipse.core.internal.filebuffers.ResourceFileBuffer.create(ResourceFileBuffer.java:238)
+	at org.eclipse.core.internal.filebuffers.TextFileBufferManager.connect(TextFileBufferManager.java:112)
+	at org.eclipse.ui.editors.text.TextFileDocumentProvider.createFileInfo(TextFileDocumentProvider.java:559)
+	at org.eclipse.jdt.internal.ui.javaeditor.CompilationUnitDocumentProvider.createFileInfo(CompilationUnitDocumentProvider.java:980)
+	at org.eclipse.ui.editors.text.TextFileDocumentProvider.connect(TextFileDocumentProvider.java:478)
+	at org.eclipse.jdt.internal.ui.javaeditor.CompilationUnitDocumentProvider.connect(CompilationUnitDocumentProvider.java:1244)
+	at org.eclipse.ui.texteditor.AbstractTextEditor.doSetInput(AbstractTextEditor.java:4233)
+	at org.eclipse.ui.texteditor.StatusTextEditor.doSetInput(StatusTextEditor.java:237)
+	at org.eclipse.ui.texteditor.AbstractDecoratedTextEditor.doSetInput(AbstractDecoratedTextEditor.java:1480)
+	at org.eclipse.jdt.internal.ui.javaeditor.JavaEditor.internalDoSetInput(JavaEditor.java:2584)
+	at org.eclipse.jdt.internal.ui.javaeditor.JavaEditor.doSetInput(JavaEditor.java:2557)
+	at org.eclipse.jdt.internal.ui.javaeditor.CompilationUnitEditor.doSetInput(CompilationUnitEditor.java:1395)
+	at org.eclipse.ui.texteditor.AbstractTextEditor$19.run(AbstractTextEditor.java:3220)
+	at org.eclipse.jface.operation.ModalContext.runInCurrentThread(ModalContext.java:466)
+	at org.eclipse.jface.operation.ModalContext.run(ModalContext.java:374)
+	at org.eclipse.ui.internal.WorkbenchWindow$13.run(WorkbenchWindow.java:2157)
+	at org.eclipse.swt.custom.BusyIndicator.showWhile(BusyIndicator.java:70)
+	at org.eclipse.ui.internal.WorkbenchWindow.run(WorkbenchWindow.java:2153)
+	at org.eclipse.ui.texteditor.AbstractTextEditor.internalInit(AbstractTextEditor.java:3238)
+	at org.eclipse.ui.texteditor.AbstractTextEditor.init(AbstractTextEditor.java:3265)
+	at org.eclipse.ui.internal.EditorReference.initialize(EditorReference.java:390)
+	at org.eclipse.ui.internal.e4.compatibility.CompatibilityPart.create(CompatibilityPart.java:305)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(Unknown Source)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(Unknown Source)
+	at java.lang.reflect.Method.invoke(Unknown Source)
+	at org.eclipse.e4.core.internal.di.MethodRequestor.execute(MethodRequestor.java:55)
+	at org.eclipse.e4.core.internal.di.InjectorImpl.processAnnotated(InjectorImpl.java:888)
+	at org.eclipse.e4.core.internal.di.InjectorImpl.processAnnotated(InjectorImpl.java:869)
+	at org.eclipse.e4.core.internal.di.InjectorImpl.inject(InjectorImpl.java:120)
+	at org.eclipse.e4.core.internal.di.InjectorImpl.internalMake(InjectorImpl.java:337)
+	at org.eclipse.e4.core.internal.di.InjectorImpl.make(InjectorImpl.java:258)
+	at org.eclipse.e4.core.contexts.ContextInjectionFactory.make(ContextInjectionFactory.java:162)
+	at org.eclipse.e4.ui.internal.workbench.ReflectionContributionFactory.createFromBundle(ReflectionContributionFactory.java:104)
+	at org.eclipse.e4.ui.internal.workbench.ReflectionContributionFactory.doCreate(ReflectionContributionFactory.java:73)
+	at org.eclipse.e4.ui.internal.workbench.ReflectionContributionFactory.create(ReflectionContributionFactory.java:55)
+	at org.eclipse.e4.ui.workbench.renderers.swt.ContributedPartRenderer.createWidget(ContributedPartRenderer.java:127)
+	at org.eclipse.e4.ui.internal.workbench.swt.PartRenderingEngine.createWidget(PartRenderingEngine.java:983)
+	at org.eclipse.e4.ui.internal.workbench.swt.PartRenderingEngine.safeCreateGui(PartRenderingEngine.java:662)
+	at org.eclipse.e4.ui.internal.workbench.swt.PartRenderingEngine.safeCreateGui(PartRenderingEngine.java:766)
+	at org.eclipse.e4.ui.internal.workbench.swt.PartRenderingEngine.access$2(PartRenderingEngine.java:737)
+	at org.eclipse.e4.ui.internal.workbench.swt.PartRenderingEngine$7.run(PartRenderingEngine.java:731)
+	at org.eclipse.core.runtime.SafeRunner.run(SafeRunner.java:42)
+	at org.eclipse.e4.ui.internal.workbench.swt.PartRenderingEngine.createGui(PartRenderingEngine.java:715)
+	at org.eclipse.e4.ui.internal.workbench.PartServiceImpl$1.handleEvent(PartServiceImpl.java:95)
+	at org.eclipse.e4.ui.services.internal.events.UIEventHandler$1.run(UIEventHandler.java:40)
+	at org.eclipse.swt.widgets.Synchronizer.syncExec(Synchronizer.java:187)
+	at org.eclipse.ui.internal.UISynchronizer.syncExec(UISynchronizer.java:156)
+	at org.eclipse.swt.widgets.Display.syncExec(Display.java:4734)
+	at org.eclipse.e4.ui.internal.workbench.swt.E4Application$1.syncExec(E4Application.java:218)
+	at org.eclipse.e4.ui.services.internal.events.UIEventHandler.handleEvent(UIEventHandler.java:36)
+	at org.eclipse.equinox.internal.event.EventHandlerWrapper.handleEvent(EventHandlerWrapper.java:197)
+	at org.eclipse.equinox.internal.event.EventHandlerTracker.dispatchEvent(EventHandlerTracker.java:197)
+	at org.eclipse.equinox.internal.event.EventHandlerTracker.dispatchEvent(EventHandlerTracker.java:1)
+	at org.eclipse.osgi.framework.eventmgr.EventManager.dispatchEvent(EventManager.java:230)
+	at org.eclipse.osgi.framework.eventmgr.ListenerQueue.dispatchEventSynchronous(ListenerQueue.java:148)
+	at org.eclipse.equinox.internal.event.EventAdminImpl.dispatchEvent(EventAdminImpl.java:135)
+	at org.eclipse.equinox.internal.event.EventAdminImpl.sendEvent(EventAdminImpl.java:78)
+	at org.eclipse.equinox.internal.event.EventComponent.sendEvent(EventComponent.java:39)
+	at org.eclipse.e4.ui.services.internal.events.EventBroker.send(EventBroker.java:81)
+	at org.eclipse.e4.ui.internal.workbench.UIEventPublisher.notifyChanged(UIEventPublisher.java:59)
+	at org.eclipse.emf.common.notify.impl.BasicNotifierImpl.eNotify(BasicNotifierImpl.java:374)
+	at org.eclipse.e4.ui.model.application.ui.impl.ElementContainerImpl.setSelectedElement(ElementContainerImpl.java:171)
+	at org.eclipse.e4.ui.workbench.renderers.swt.StackRenderer$10.widgetSelected(StackRenderer.java:1031)
+	at org.eclipse.swt.widgets.TypedListener.handleEvent(TypedListener.java:248)
+	at org.eclipse.swt.widgets.EventTable.sendEvent(EventTable.java:84)
+	at org.eclipse.swt.widgets.Display.sendEvent(Display.java:4353)
+	at org.eclipse.swt.widgets.Widget.sendEvent(Widget.java:1061)
+	at org.eclipse.swt.widgets.Widget.sendEvent(Widget.java:1085)
+	at org.eclipse.swt.widgets.Widget.sendEvent(Widget.java:1070)
+	at org.eclipse.swt.widgets.Widget.notifyListeners(Widget.java:782)
+	at org.eclipse.swt.custom.CTabFolder.setSelection(CTabFolder.java:3110)
+	at org.eclipse.swt.custom.CTabFolder.onMouse(CTabFolder.java:1794)
+	at org.eclipse.swt.custom.CTabFolder$1.handleEvent(CTabFolder.java:283)
+	at org.eclipse.swt.widgets.EventTable.sendEvent(EventTable.java:84)
+	at org.eclipse.swt.widgets.Display.sendEvent(Display.java:4353)
+	at org.eclipse.swt.widgets.Widget.sendEvent(Widget.java:1061)
+	at org.eclipse.swt.widgets.Display.runDeferredEvents(Display.java:4172)
+	at org.eclipse.swt.widgets.Display.readAndDispatch(Display.java:3761)
+	at org.eclipse.e4.ui.internal.workbench.swt.PartRenderingEngine$9.run(PartRenderingEngine.java:1151)
+	at org.eclipse.core.databinding.observable.Realm.runWithDefault(Realm.java:332)
+	at org.eclipse.e4.ui.internal.workbench.swt.PartRenderingEngine.run(PartRenderingEngine.java:1032)
+	at org.eclipse.e4.ui.internal.workbench.E4Workbench.createAndRunUI(E4Workbench.java:148)
+	at org.eclipse.ui.internal.Workbench$5.run(Workbench.java:636)
+	at org.eclipse.core.databinding.observable.Realm.runWithDefault(Realm.java:332)
+	at org.eclipse.ui.internal.Workbench.createAndRunWorkbench(Workbench.java:579)
+	at org.eclipse.ui.PlatformUI.createAndRunWorkbench(PlatformUI.java:150)
+	at org.eclipse.ui.internal.ide.application.IDEApplication.start(IDEApplication.java:135)
+	at org.eclipse.equinox.internal.app.EclipseAppHandle.run(EclipseAppHandle.java:196)
+	at org.eclipse.core.runtime.internal.adaptor.EclipseAppLauncher.runApplication(EclipseAppLauncher.java:134)
+	at org.eclipse.core.runtime.internal.adaptor.EclipseAppLauncher.start(EclipseAppLauncher.java:104)
+	at org.eclipse.core.runtime.adaptor.EclipseStarter.run(EclipseStarter.java:380)
+	at org.eclipse.core.runtime.adaptor.EclipseStarter.run(EclipseStarter.java:235)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(Unknown Source)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(Unknown Source)
+	at java.lang.reflect.Method.invoke(Unknown Source)
+	at org.eclipse.equinox.launcher.Main.invokeFramework(Main.java:648)
+	at org.eclipse.equinox.launcher.Main.basicRun(Main.java:603)
+	at org.eclipse.equinox.launcher.Main.run(Main.java:1465)
+	at org.eclipse.equinox.launcher.Main.main(Main.java:1438)
+!SUBENTRY 1 org.eclipse.core.filebuffers 4 0 2015-09-14 22:50:35.902
+!MESSAGE Cannot determine URI for '/MyAnt_2.1/src/MultiThread/Loader.java'.
+!SESSION 2015-09-14 22:51:46.621 -----------------------------------------------
+eclipse.buildId=4.4.2.M20150204-1700
+java.version=1.8.0_31
+java.vendor=Oracle Corporation
+BootLoader constants: OS=win32, ARCH=x86_64, WS=win32, NL=en_US
+Command-line arguments:  -os win32 -ws win32 -arch x86_64
+
+!ENTRY org.eclipse.emf.ecore 2 0 2015-09-14 22:52:04.692
+!MESSAGE Both 'it.unibo.xtext.robot.ui' and 'it.unibo.xtext.highRobot.spec.ui' register an extension parser for 'ddr'
+!SESSION 2015-09-14 22:52:30.026 -----------------------------------------------
+eclipse.buildId=4.4.2.M20150204-1700
+java.version=1.8.0_31
+java.vendor=Oracle Corporation
+BootLoader constants: OS=win32, ARCH=x86_64, WS=win32, NL=en_US
+Command-line arguments:  -os win32 -ws win32 -arch x86_64
+
+!ENTRY org.eclipse.emf.ecore 2 0 2015-09-14 22:52:35.649
+!MESSAGE Both 'it.unibo.xtext.robot.ui' and 'it.unibo.xtext.highRobot.spec.ui' register an extension parser for 'ddr'
+
+!ENTRY org.eclipse.egit.ui 2 0 2015-09-14 22:52:45.603
+!MESSAGE Warning: EGit couldn't detect the installation path "gitPrefix" of native Git. Hence EGit can't respect system level
+Git settings which might be configured in ${gitPrefix}/etc/gitconfig under the native Git installation directory.
+The most important of these settings is core.autocrlf. Git for Windows by default sets this parameter to true in
+this system level configuration. The Git installation location can be configured on the
+Team > Git > Configuration preference page's 'System Settings' tab.
+This warning can be switched off on the Team > Git > Confirmations and Warnings preference page.
+
+!ENTRY org.eclipse.egit.ui 2 0 2015-09-14 22:52:45.603
+!MESSAGE Warning: The environment variable HOME is not set. The following directory will be used to store the Git
+user global configuration and to define the default location to store repositories: 'C:\Users\MarMat89'. If this is
+not correct please set the HOME environment variable and restart Eclipse. Otherwise Git for Windows and
+EGit might behave differently since they see different configuration options.
+This warning can be switched off on the Team > Git > Confirmations and Warnings preference page.
+
+!ENTRY org.apache.log4j 2 0 2015-09-14 22:52:45.696
+!MESSAGE org.eclipse.xtext.internal.ExtensionResourceServiceProviderRegistryReader  - Both 'it.unibo.xtext.robot.ui' and 'it.unibo.xtext.highRobot.spec.ui' register a content parser for 'ddr'
+
+!SESSION 2015-09-14 23:54:34.225 -----------------------------------------------
+eclipse.buildId=4.4.2.M20150204-1700
+java.version=1.8.0_31
+java.vendor=Oracle Corporation
+BootLoader constants: OS=win32, ARCH=x86_64, WS=win32, NL=en_US
+Command-line arguments:  -os win32 -ws win32 -arch x86_64
+
+!ENTRY org.eclipse.emf.ecore 2 0 2015-09-14 23:54:45.217
+!MESSAGE Both 'it.unibo.xtext.robot.ui' and 'it.unibo.xtext.highRobot.spec.ui' register an extension parser for 'ddr'
+
+!ENTRY org.eclipse.egit.ui 2 0 2015-09-14 23:54:55.321
+!MESSAGE Warning: EGit couldn't detect the installation path "gitPrefix" of native Git. Hence EGit can't respect system level
+Git settings which might be configured in ${gitPrefix}/etc/gitconfig under the native Git installation directory.
+The most important of these settings is core.autocrlf. Git for Windows by default sets this parameter to true in
+this system level configuration. The Git installation location can be configured on the
+Team > Git > Configuration preference page's 'System Settings' tab.
+This warning can be switched off on the Team > Git > Confirmations and Warnings preference page.
+
+!ENTRY org.eclipse.egit.ui 2 0 2015-09-14 23:54:55.321
+!MESSAGE Warning: The environment variable HOME is not set. The following directory will be used to store the Git
+user global configuration and to define the default location to store repositories: 'C:\Users\MarMat89'. If this is
+not correct please set the HOME environment variable and restart Eclipse. Otherwise Git for Windows and
+EGit might behave differently since they see different configuration options.
+This warning can be switched off on the Team > Git > Confirmations and Warnings preference page.
+
+!ENTRY org.apache.log4j 2 0 2015-09-14 23:55:09.799
+!MESSAGE org.eclipse.xtext.internal.ExtensionResourceServiceProviderRegistryReader  - Both 'it.unibo.xtext.robot.ui' and 'it.unibo.xtext.highRobot.spec.ui' register a content parser for 'ddr'
+
+!SESSION 2015-09-15 00:28:39.651 -----------------------------------------------
+eclipse.buildId=4.4.2.M20150204-1700
+java.version=1.8.0_31
+java.vendor=Oracle Corporation
+BootLoader constants: OS=win32, ARCH=x86_64, WS=win32, NL=en_US
+Command-line arguments:  -os win32 -ws win32 -arch x86_64
+
+!ENTRY org.eclipse.emf.ecore 2 0 2015-09-15 00:28:43.956
+!MESSAGE Both 'it.unibo.xtext.robot.ui' and 'it.unibo.xtext.highRobot.spec.ui' register an extension parser for 'ddr'
+
+!ENTRY org.apache.log4j 2 0 2015-09-15 00:28:48.625
+!MESSAGE org.eclipse.xtext.internal.ExtensionResourceServiceProviderRegistryReader  - Both 'it.unibo.xtext.robot.ui' and 'it.unibo.xtext.highRobot.spec.ui' register a content parser for 'ddr'
+
+
+!ENTRY org.eclipse.egit.ui 2 0 2015-09-15 00:28:54.275
+!MESSAGE Warning: EGit couldn't detect the installation path "gitPrefix" of native Git. Hence EGit can't respect system level
+Git settings which might be configured in ${gitPrefix}/etc/gitconfig under the native Git installation directory.
+The most important of these settings is core.autocrlf. Git for Windows by default sets this parameter to true in
+this system level configuration. The Git installation location can be configured on the
+Team > Git > Configuration preference page's 'System Settings' tab.
+This warning can be switched off on the Team > Git > Confirmations and Warnings preference page.
+
+!ENTRY org.eclipse.egit.ui 2 0 2015-09-15 00:28:54.275
+!MESSAGE Warning: The environment variable HOME is not set. The following directory will be used to store the Git
+user global configuration and to define the default location to store repositories: 'C:\Users\MarMat89'. If this is
+not correct please set the HOME environment variable and restart Eclipse. Otherwise Git for Windows and
+EGit might behave differently since they see different configuration options.
+This warning can be switched off on the Team > Git > Confirmations and Warnings preference page.
+!SESSION 2015-09-22 00:18:06.914 -----------------------------------------------
+eclipse.buildId=4.4.2.M20150204-1700
+java.version=1.8.0_31
+java.vendor=Oracle Corporation
+BootLoader constants: OS=win32, ARCH=x86_64, WS=win32, NL=en_US
+Command-line arguments:  -os win32 -ws win32 -arch x86_64
+
+!ENTRY org.eclipse.emf.ecore 2 0 2015-09-22 00:18:11.849
+!MESSAGE Both 'it.unibo.xtext.robot.ui' and 'it.unibo.xtext.highRobot.spec.ui' register an extension parser for 'ddr'
+
+!ENTRY org.apache.log4j 2 0 2015-09-22 00:18:16.989
+!MESSAGE org.eclipse.xtext.internal.ExtensionResourceServiceProviderRegistryReader  - Both 'it.unibo.xtext.robot.ui' and 'it.unibo.xtext.highRobot.spec.ui' register a content parser for 'ddr'
+
+
+!ENTRY org.eclipse.egit.ui 2 0 2015-09-22 00:18:22.356
+!MESSAGE Warning: EGit couldn't detect the installation path "gitPrefix" of native Git. Hence EGit can't respect system level
+Git settings which might be configured in ${gitPrefix}/etc/gitconfig under the native Git installation directory.
+The most important of these settings is core.autocrlf. Git for Windows by default sets this parameter to true in
+this system level configuration. The Git installation location can be configured on the
+Team > Git > Configuration preference page's 'System Settings' tab.
+This warning can be switched off on the Team > Git > Confirmations and Warnings preference page.
+
+!ENTRY org.eclipse.egit.ui 2 0 2015-09-22 00:18:22.356
+!MESSAGE Warning: The environment variable HOME is not set. The following directory will be used to store the Git
+user global configuration and to define the default location to store repositories: 'C:\Users\MarMat89'. If this is
+not correct please set the HOME environment variable and restart Eclipse. Otherwise Git for Windows and
+EGit might behave differently since they see different configuration options.
+This warning can be switched off on the Team > Git > Confirmations and Warnings preference page.
+!SESSION 2015-09-22 00:22:07.073 -----------------------------------------------
+eclipse.buildId=4.4.2.M20150204-1700
+java.version=1.8.0_31
+java.vendor=Oracle Corporation
+BootLoader constants: OS=win32, ARCH=x86_64, WS=win32, NL=en_US
+Command-line arguments:  -os win32 -ws win32 -arch x86_64
+
+!ENTRY org.eclipse.emf.ecore 2 0 2015-09-22 00:22:17.495
+!MESSAGE Both 'it.unibo.xtext.robot.ui' and 'it.unibo.xtext.highRobot.spec.ui' register an extension parser for 'ddr'
+
+!ENTRY org.apache.log4j 2 0 2015-09-22 00:22:22.412
+!MESSAGE org.eclipse.xtext.internal.ExtensionResourceServiceProviderRegistryReader  - Both 'it.unibo.xtext.robot.ui' and 'it.unibo.xtext.highRobot.spec.ui' register a content parser for 'ddr'
+
+
+!ENTRY org.eclipse.egit.ui 2 0 2015-09-22 00:22:27.872
+!MESSAGE Warning: EGit couldn't detect the installation path "gitPrefix" of native Git. Hence EGit can't respect system level
+Git settings which might be configured in ${gitPrefix}/etc/gitconfig under the native Git installation directory.
+The most important of these settings is core.autocrlf. Git for Windows by default sets this parameter to true in
+this system level configuration. The Git installation location can be configured on the
+Team > Git > Configuration preference page's 'System Settings' tab.
+This warning can be switched off on the Team > Git > Confirmations and Warnings preference page.
+
+!ENTRY org.eclipse.egit.ui 2 0 2015-09-22 00:22:27.872
+!MESSAGE Warning: The environment variable HOME is not set. The following directory will be used to store the Git
+user global configuration and to define the default location to store repositories: 'C:\Users\MarMat89'. If this is
+not correct please set the HOME environment variable and restart Eclipse. Otherwise Git for Windows and
+EGit might behave differently since they see different configuration options.
+This warning can be switched off on the Team > Git > Confirmations and Warnings preference page.
+!SESSION 2015-09-22 00:30:32.108 -----------------------------------------------
+eclipse.buildId=4.4.2.M20150204-1700
+java.version=1.8.0_31
+java.vendor=Oracle Corporation
+BootLoader constants: OS=win32, ARCH=x86_64, WS=win32, NL=en_US
+Command-line arguments:  -os win32 -ws win32 -arch x86_64
+
+!ENTRY org.eclipse.emf.ecore 2 0 2015-09-22 00:30:39.196
+!MESSAGE Both 'it.unibo.xtext.robot.ui' and 'it.unibo.xtext.highRobot.spec.ui' register an extension parser for 'ddr'
+
+!ENTRY org.apache.log4j 2 0 2015-09-22 00:30:43.888
+!MESSAGE org.eclipse.xtext.internal.ExtensionResourceServiceProviderRegistryReader  - Both 'it.unibo.xtext.robot.ui' and 'it.unibo.xtext.highRobot.spec.ui' register a content parser for 'ddr'
+
+
+!ENTRY org.eclipse.egit.ui 2 0 2015-09-22 00:30:49.509
+!MESSAGE Warning: EGit couldn't detect the installation path "gitPrefix" of native Git. Hence EGit can't respect system level
+Git settings which might be configured in ${gitPrefix}/etc/gitconfig under the native Git installation directory.
+The most important of these settings is core.autocrlf. Git for Windows by default sets this parameter to true in
+this system level configuration. The Git installation location can be configured on the
+Team > Git > Configuration preference page's 'System Settings' tab.
+This warning can be switched off on the Team > Git > Confirmations and Warnings preference page.
+
+!ENTRY org.eclipse.egit.ui 2 0 2015-09-22 00:30:49.509
+!MESSAGE Warning: The environment variable HOME is not set. The following directory will be used to store the Git
+user global configuration and to define the default location to store repositories: 'C:\Users\MarMat89'. If this is
+not correct please set the HOME environment variable and restart Eclipse. Otherwise Git for Windows and
+EGit might behave differently since they see different configuration options.
+This warning can be switched off on the Team > Git > Confirmations and Warnings preference page.
